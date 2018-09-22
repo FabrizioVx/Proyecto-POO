@@ -1,1 +1,59 @@
-#niclude<iostream>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char respuesta;
+    int punt=0;
+
+    for (int i = 0; i < 10; i++) {
+        switch (i) {
+            case 1: // Modulo a
+                cout << "test de CI" << endl;
+
+                cout << "1.- pregunta" << endl;
+                cout << "a)" << endl;
+                cout << "b)" << endl;
+                cout << "c)" << endl;
+                cout << "d)" << endl;
+                cin >> respuesta;
+
+                if (respuesta == 'a') {
+                    cout << "la respuesta es correcta" << endl;
+                    punt= punt+10;
+                    cout << "PUNTAJE: " << punt <<  endl;
+                }
+
+                else
+                    cout << "La respuesta es incorrecta" << endl;
+                break;
+
+                case 2: // Modulo a
+                cout << "test de CI" << endl;
+
+                cout << "2.- pregunta" << endl;
+                cout << "a)" << endl;
+                cout << "b)" << endl;
+                cout << "c)" << endl;
+                cout << "d)" << endl;
+                cin >> respuesta;
+
+                if (respuesta == 'a') {
+                    cout << "la respuesta es correcta" << endl;
+                    punt= punt+10;
+                    cout << "PUNTAJE: " << punt <<  endl;
+                    
+                }
+
+                else
+                    cout << "La respuesta es incorrecta" << endl;
+                    
+               
+
+
+        }
+
+        }
+
+
+    return 0;
+}
