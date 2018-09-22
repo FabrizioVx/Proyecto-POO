@@ -1,11 +1,10 @@
 #include <iostream>
 using namespace std;
-string nombre, apellido;
 
 int main() {
     char respuesta;
     int punt=0;
-    
+
     for (int i = 0; i < 10; i++) {
         switch (i) {
             case 1: // Modulo a
