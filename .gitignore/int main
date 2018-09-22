@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+    string nombre; apellido;
     char respuesta;
     int punt=0;
 
