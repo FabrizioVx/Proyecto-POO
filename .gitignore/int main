@@ -6,8 +6,9 @@ int main() {
     char respuesta;
     int punt=0;
     
-    cout<<"Proporcione su nombre: ";
-    cout<<"Proporcione su apellido: ";
+    
+    cout<<"Proporcione su nombre: "; cin>>nombre;
+    cout<<"Proporcione su apellido: "; cin>>apellido;
     for (int i = 0; i < 10; i++) {
         switch (i) {
             case 1: // Modulo a
