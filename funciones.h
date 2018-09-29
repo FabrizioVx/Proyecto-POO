@@ -4,6 +4,8 @@
 
 #ifndef PROYECTO_1_FUNCIONES_H
 #define PROYECTO_1_FUNCIONES_H
-int promint();
-
+int test();
+void burros(int ciclo);
+void normales(int ciclo,int horariopref);
+void cracks(int ciclo,int horariopref);
 #endif //PROYECTO_1_FUNCIONES_H
