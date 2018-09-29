@@ -11,17 +11,19 @@ int main() {
     int puntos=test();//los puntos
     cout<<"PUNTAJE TOTAL = "<<puntos<<endl;
     int ciclo, horariopref;
-    cout<<"ingrese ciclo: ";cin>>ciclo;
-
-    if (test()<30){
+    do{
+    cout<<"ingrese ciclo: ";cin>>ciclo;}
+    while(ciclo>5 && ciclo<0); //solo hasta quinto ciclo
+//imprimiendo horario
+    if (test()<30){//variado
         burros(ciclo);//solo un horario
     }
     if(test()>=30 && test()<70){
-      cout<<"ingrese horario preferido(manana - 1 o tarde - 2) : ";cin>>horariopref;
+      cout<<"ingrese horario preferido : ";cin>>horariopref;//manana y tarde
         normales(ciclo,horariopref);//
     }
     if(test()>=70){
-      cout<<"ingrese horario preferido(manana - 1, tarde - 2, noche 3): ";cin>>horariopref;
+      cout<<"ingrese horario preferido: ";cin>>horariopref;//manana tarde y noche
         cracks(ciclo,horariopref);
     }
     return 0;
