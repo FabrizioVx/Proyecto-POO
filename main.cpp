@@ -13,7 +13,7 @@ int main() {
     int ciclo, horariopref;
     do{
     cout<<"ingrese ciclo: ";cin>>ciclo;}
-    while(ciclo>5 && ciclo<0); //solo hasta quinto ciclo
+    while(5<ciclo || ciclo<=0); //solo hasta quinto ciclo
 //imprimiendo horario
     if (test()<30){//variado
         burros(ciclo);//solo un horario
