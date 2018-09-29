@@ -205,7 +205,7 @@ int test() {
     return punt;
 }
 void burros(int ciclo){
-    if (ciclo==0){
+    if (ciclo==1){
         ifstream archivo;
         string texto;
         archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
@@ -214,10 +214,6 @@ void burros(int ciclo){
             cout<<texto<<endl;
         }
         archivo.close();
-
-    }
-    if (ciclo==1){
-
     }
     if (ciclo==2){
 
@@ -233,5 +229,87 @@ void burros(int ciclo){
     }
 
 
+
+}
+void normales(int ciclo,int horariopref){
+    if (ciclo==1){
+        if(horariopref==0)
+        {ifstream archivo;
+            string texto;
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            while(!archivo.eof()){
+                getline(archivo,texto);
+                cout<<texto<<endl;
+            }
+            archivo.close();}
+        if(horariopref==1)
+        {ifstream archivo;
+            string texto;
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            while(!archivo.eof()){
+                getline(archivo,texto);
+                cout<<texto<<endl;
+            }
+            archivo.close();}
+    }
+    if (ciclo==2){
+
+    }
+    if (ciclo==3){
+
+    }
+    if (ciclo==4){
+
+    }
+    if (ciclo==5){
+
+    }
+
+
+}
+void cracks(int ciclo,int horariopref){
+    if (ciclo==1){
+        if(horariopref==0)
+        {ifstream archivo;
+            string texto;
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            while(!archivo.eof()){
+                getline(archivo,texto);
+                cout<<texto<<endl;
+            }
+            archivo.close();}
+
+        if(horariopref==1)
+        {ifstream archivo;
+            string texto;
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            while(!archivo.eof()){
+                getline(archivo,texto);
+                cout<<texto<<endl;
+            }
+            archivo.close();}
+
+        if(horariopref==2)
+        {ifstream archivo;
+            string texto;
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            while(!archivo.eof()){
+                getline(archivo,texto);
+                cout<<texto<<endl;
+            }
+            archivo.close();}
+    }
+    if (ciclo==2){
+
+    }
+    if (ciclo==3){
+
+    }
+    if (ciclo==4){
+
+    }
+    if (ciclo==5){
+
+    }
 
 }
