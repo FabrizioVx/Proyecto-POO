@@ -6,11 +6,12 @@
 #include <fstream>
 #include <string>
 #include "funciones.h"
+#include <stdio.h>
+#include <ctype.h>
 using namespace std;
 int test() {
     char respuesta;
     int punt=0;
-
     for (int i = 0; i < 10; i++) {
         switch (i) {
             case 1:
@@ -24,7 +25,7 @@ int test() {
                 cout << "d) 59" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'a') {
+                if (respuesta == 'a'||respuesta == 'A') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -46,7 +47,7 @@ int test() {
                 cout << "d) 50" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'b') {
+                if (respuesta == 'b' ||respuesta == 'B' ) {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -66,7 +67,7 @@ int test() {
                 cout << "d) G" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'b') {
+                if (respuesta == 'b' ||respuesta == 'B') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -86,7 +87,7 @@ int test() {
                 cout << "d) LECHUGA" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'a') {
+                if (respuesta == 'a' ||respuesta == 'A') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -106,7 +107,7 @@ int test() {
                 cout << "d) 5" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'b') {
+                if (respuesta == 'b' ||respuesta == 'B') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -127,7 +128,7 @@ int test() {
                 cout << "d) Hoja" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'c') {
+                if (respuesta == 'c' ||respuesta == 'C') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -147,7 +148,7 @@ int test() {
                 cout << "d) Julia" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'c') {
+                if (respuesta == 'c' ||respuesta == 'C') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -167,7 +168,7 @@ int test() {
                 cout << "d) pensamiento" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'c') {
+                if (respuesta == 'c' ||respuesta == 'C') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -187,7 +188,7 @@ int test() {
                 cout << "d) pensamiento" << endl;
                 cin >> respuesta;
 
-                if (respuesta == 'c') {
+                if (respuesta == 'c' ||respuesta == 'C') {
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -204,7 +205,7 @@ int test() {
 
     return punt;
 }
-void burros(int ciclo){
+void bajo(int ciclo){
     if (ciclo==1){
         ifstream archivo;
         string texto;
@@ -231,12 +232,12 @@ void burros(int ciclo){
 
 
 }
-void normales(int ciclo,int horariopref){
+void normal(int ciclo,int horariopref){
     if (ciclo==1){
         if(horariopref==0)
         {ifstream archivo;
             string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
             while(!archivo.eof()){
                 getline(archivo,texto);
                 cout<<texto<<endl;
@@ -245,7 +246,7 @@ void normales(int ciclo,int horariopref){
         if(horariopref==1)
         {ifstream archivo;
             string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
             while(!archivo.eof()){
                 getline(archivo,texto);
                 cout<<texto<<endl;
@@ -267,12 +268,12 @@ void normales(int ciclo,int horariopref){
 
 
 }
-void cracks(int ciclo,int horariopref){
+void alto(int ciclo,int horariopref){
     if (ciclo==1){
         if(horariopref==0)
         {ifstream archivo;
             string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
             while(!archivo.eof()){
                 getline(archivo,texto);
                 cout<<texto<<endl;
@@ -282,7 +283,7 @@ void cracks(int ciclo,int horariopref){
         if(horariopref==1)
         {ifstream archivo;
             string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
             while(!archivo.eof()){
                 getline(archivo,texto);
                 cout<<texto<<endl;
@@ -292,7 +293,7 @@ void cracks(int ciclo,int horariopref){
         if(horariopref==2)
         {ifstream archivo;
             string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
+            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
             while(!archivo.eof()){
                 getline(archivo,texto);
                 cout<<texto<<endl;
