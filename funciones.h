@@ -5,7 +5,8 @@
 #ifndef PROYECTO_1_FUNCIONES_H
 #define PROYECTO_1_FUNCIONES_H
 int test();
-void burros(int ciclo);
-void normales(int ciclo,int horariopref);
-void cracks(int ciclo,int horariopref);
+void bajo(int ciclo);
+void normal(int ciclo,int horariopref);
+auto verificacion_let(char letra);// verifica la letra del test debe ser a b c d si no volver a ingresar
+void alto(int ciclo,int horariopref);
 #endif //PROYECTO_1_FUNCIONES_H
