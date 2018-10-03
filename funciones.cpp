@@ -26,6 +26,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'a'||respuesta == 'A') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -48,6 +49,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'b' ||respuesta == 'B' ) {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -68,6 +70,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'b' ||respuesta == 'B') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -88,6 +91,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'a' ||respuesta == 'A') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -108,6 +112,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'b' ||respuesta == 'B') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -129,6 +134,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'c' ||respuesta == 'C') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -149,6 +155,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'c' ||respuesta == 'C') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -169,6 +176,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'c' ||respuesta == 'C') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -189,6 +197,7 @@ int test() {
                 cin >> respuesta;
 
                 if (respuesta == 'c' ||respuesta == 'C') {
+                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
                     cout << "la respuesta es correcta" << endl;
                     punt= punt+10;
 
@@ -205,111 +214,56 @@ int test() {
 
     return punt;
 }
+
 void bajo(int ciclo){
     if (ciclo==1){
-        ifstream archivo;
-        string texto;
-        archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/burros/ciclo0",ios::in);//crear archivo
-        while(!archivo.eof()){
-            getline(archivo,texto);
-            cout<<texto<<endl;
+                            // Lu--Ma--Mi--Ju--Vi
+        string horario[7][5]={{" ","f"," "," ","f"},//7-9
+                              {" "," ","m"," "," "},//9-11
+                              {"m"," "," "," "," "},//11-13
+                              {" "," "," "," ","m"},//13-15
+                              {" "," "," "," "," "},//15-17
+                              {" "," "," "," "," "},//17-19
+                              {" "," "," "," "," "}};//19-21
+
+        //se imprime.... se pregunta
+        cout<<"quieres cambiarlo hijo de puta?(1=si or 0=no)\n";
+        int resp;
+        cin>>resp;
+
+        //si es tu respues es si
+        if(resp==1){
+            cout<<"que curso quieres cambiar\n";
+            char curso;
+            cin>>curso;//f
+            if (curso=='f'){
+                for (int y=0;y<7;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x]=="f"){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+            }
+            //Borro f
+            cout<<"horarios disponibles:\n";
+            cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:12\n";
+            cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:0\n";
+            cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno=0)\n";
+            int cambio;
+            cin>>cambio;
+            if(cambio==1){
+                horario[0][1]="f";
+                horario[0][4]="f";
+
+            }
+
+
+
+
+
+
         }
-        archivo.close();
-    }
-    if (ciclo==2){
-
-    }
-    if (ciclo==3){
-
-    }
-    if (ciclo==4){
-
-    }
-    if (ciclo==5){
-
-    }
-
-
-
-}
-void normal(int ciclo,int horariopref){
-    if (ciclo==1){
-        if(horariopref==0)
-        {ifstream archivo;
-            string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
-            while(!archivo.eof()){
-                getline(archivo,texto);
-                cout<<texto<<endl;
-            }
-            archivo.close();}
-        if(horariopref==1)
-        {ifstream archivo;
-            string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
-            while(!archivo.eof()){
-                getline(archivo,texto);
-                cout<<texto<<endl;
-            }
-            archivo.close();}
-    }
-    if (ciclo==2){
-
-    }
-    if (ciclo==3){
-
-    }
-    if (ciclo==4){
-
-    }
-    if (ciclo==5){
-
-    }
-
-
-}
-void alto(int ciclo,int horariopref){
-    if (ciclo==1){
-        if(horariopref==0)
-        {ifstream archivo;
-            string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
-            while(!archivo.eof()){
-                getline(archivo,texto);
-                cout<<texto<<endl;
-            }
-            archivo.close();}
-
-        if(horariopref==1)
-        {ifstream archivo;
-            string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
-            while(!archivo.eof()){
-                getline(archivo,texto);
-                cout<<texto<<endl;
-            }
-            archivo.close();}
-
-        if(horariopref==2)
-        {ifstream archivo;
-            string texto;
-            archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/",ios::in);//crear archivo
-            while(!archivo.eof()){
-                getline(archivo,texto);
-                cout<<texto<<endl;
-            }
-            archivo.close();}
-    }
-    if (ciclo==2){
-
-    }
-    if (ciclo==3){
-
-    }
-    if (ciclo==4){
-
-    }
-    if (ciclo==5){
 
     }
 
