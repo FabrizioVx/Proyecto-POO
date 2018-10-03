@@ -244,25 +244,57 @@ void bajo(int ciclo){
                         }
                     }
                 }
-            }
+
             //Borro f
-            cout<<"horarios disponibles:\n";
-            cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:12\n";
-            cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:0\n";
-            cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno=0)\n";
-            int cambio;
-            cin>>cambio;
-            if(cambio==1){
-                horario[0][1]="f";
-                horario[0][4]="f";
+                cout<<"horarios disponibles:\n";
+                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:12\n";
+                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:0\n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno=0)\n";
+                int cambio;
+                cin>>cambio;
+                if(cambio==1){
+                    horario[0][1]="f";
+                    horario[0][4]="f";
+
+                }
+                if(cambio==2){
+                    horario[1][1]="f";
+                    horario[1][4]="f";
+
+                }
 
             }
+            if (curso=='m'){
+                for (int y=0;y<7;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x]=="m"){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
 
+                //Borro f
+                cout<<"horarios disponibles:\n";
+                cout<<"matematica seccion 1 lu 11-1 mi 9-11 vi 1-3 vac:50\n";
+                cout<<"matematica seccion 2 lu 1-3 mi 11-1 vi 3-5 vac:35\n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno=0)\n";
+                int cambio;
+                cin>>cambio;
+                if(cambio==1){
+                    horario[2][0]="m";
+                    horario[1][2]="m";
+                    horario[3][4]="m";
 
+                }
+                if(cambio==2){
+                    horario[3][0]="m";
+                    horario[2][2]="m";
+                    horario[4][4]="m";
 
+                }
 
-
-
+            }
+            
         }
 
     }
