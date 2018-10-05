@@ -8,6 +8,7 @@
 #include "funciones.h"
 #include <stdio.h>
 #include <ctype.h>
+#include <iomanip>
 using namespace std;
 int test() {
     char respuesta;
@@ -215,88 +216,98 @@ int test() {
     return punt;
 }
 
-void bajo(int ciclo){
+void alto(int ciclo){
     if (ciclo==1){
                             // Lu--Ma--Mi--Ju--Vi
-        string horario[7][5]={{" ","f"," "," ","f"},//7-9
-                              {" "," ","m"," "," "},//9-11
-                              {"m"," "," "," "," "},//11-13
-                              {" "," "," "," ","m"},//13-15
-                              {" "," "," "," "," "},//15-17
+        string horario[8][5]={{"L","M","M","J","V"},//dias
+                              {"E","L"," ","L"," "},//7-9
+                              {"A","F"," "," ","F"},//9-11
+                              {"M"," ","M"," ","M"},//11-13
+                              {" ","P"," "," ","P"},//13-15
+                              {"D"," ","D","D"," "},//15-17
                               {" "," "," "," "," "},//17-19
                               {" "," "," "," "," "}};//19-21
 
-        //se imprime.... se pregunta
-        cout<<"quieres cambiarlo hijo de puta?(1=si or 0=no)\n";
-        int resp;
-        cin>>resp;
+        for(int i=0;i<8;i++){
+            if(i==0){cout<<"Dias  ";}
+            if(i==1){cout<<"07-09 ";}
+            if(i==2){cout<<"09-11 ";}
+            if(i==3){cout<<"11-13 ";}
+            if(i==4){cout<<"13-15 ";}
+            if(i==5){cout<<"15-17 ";}
+            if(i==6){cout<<"17-19 ";}
+            if(i==7){cout<<"19-21 ";}
+            for(int j=0;j<5;j++){
 
-        //si es tu respues es si
-        if(resp==1){
-            cout<<"que curso quieres cambiar\n";
-            char curso;
-            cin>>curso;//f
-            if (curso=='f'){
-                for (int y=0;y<7;y++){
-                    for(int x=0;x<5;x++){
-                        if (horario[y][x]=="f"){
-                            horario[y][x]=" ";
-                        }
-                    }
-                }
-
-            //Borro f
-                cout<<"horarios disponibles:\n";
-                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:12\n";
-                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:0\n";
-                cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno=0)\n";
-                int cambio;
-                cin>>cambio;
-                if(cambio==1){
-                    horario[0][1]="f";
-                    horario[0][4]="f";
-
-                }
-                if(cambio==2){
-                    horario[1][1]="f";
-                    horario[1][4]="f";
-
-                }
-
+                cout<<setw(5)<<"|"<<horario[i][j]<<"|";
             }
-            if (curso=='m'){
-                for (int y=0;y<7;y++){
-                    for(int x=0;x<5;x++){
-                        if (horario[y][x]=="m"){
-                            horario[y][x]=" ";
-                        }
-                    }
-                }
 
-                //Borro f
-                cout<<"horarios disponibles:\n";
-                cout<<"matematica seccion 1 lu 11-1 mi 9-11 vi 1-3 vac:50\n";
-                cout<<"matematica seccion 2 lu 1-3 mi 11-1 vi 3-5 vac:35\n";
-                cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno=0)\n";
-                int cambio;
-                cin>>cambio;
-                if(cambio==1){
-                    horario[2][0]="m";
-                    horario[1][2]="m";
-                    horario[3][4]="m";
-
-                }
-                if(cambio==2){
-                    horario[3][0]="m";
-                    horario[2][2]="m";
-                    horario[4][4]="m";
-
-                }
-
-            }
-            
+            cout<<endl;
         }
+        //se imprime el horario
+        int resp=1;//para entrar al loop
+        do{
+            cout<<"quieres cambiarlo?(1=si or 0 u otro numero=no)\n";//pregunta si deseas cambiar
+            cin>>resp;
+            if(resp!=1)break;//si tu respuesta es no se sale del loop
+            cout<<"que curso quieres cambiar: \n";
+            char curso;
+            cin>>curso;//se ingresa el curso a cambiar
 
+            if (curso=='f'){//se elimina en toda la matriz el curso elegido
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='F'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+
+                //Borrado f
+                //comunicando los cursos disponibles
+                cout<<"horarios disponibles:\n";
+                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:20\n";
+                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:20\n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 o incorrecto)\n";
+                int cambio;
+                cin>>cambio;// opcion a eligir
+                if(cambio==1){//primero se verifica si hace conflicto en tu horario
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[1][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="F";
+                            horario[1][4]="F";
+                        }
+                    }
+
+
+                }
+                if(cambio==2){//primero se verifica si hace conflicto en tu horario
+                    char muestra = horario[2][1][0];
+                    char muestra2=horario[2][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[2][1]="F";
+                            horario[2][4]="F";
+                        }
+                    }
+
+
+                }
+
+            }
+
+        }while(resp==1);
     }
 
 }
