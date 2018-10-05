@@ -6,7 +6,7 @@
 #define PROYECTO_1_FUNCIONES_H
 int test();
 void bajo(int ciclo);
-void normal(int ciclo,int horariopref);
+void normal(int ciclo);
 auto verificacion_let(char letra);// verifica la letra del test debe ser a b c d si no volver a ingresar
-void alto(int ciclo,int horariopref);
+void alto(int ciclo);
 #endif //PROYECTO_1_FUNCIONES_H
