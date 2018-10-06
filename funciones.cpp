@@ -217,7 +217,7 @@ int test() {
 }
 
 void alto(int ciclo){
-    if (ciclo==1){
+    if (ciclo==2){
                             // Lu--Ma--Mi--Ju--Vi
         string horario[8][5]={{"L","M","M","J","V"},//dias
                               {"E","L"," ","L"," "},//7-9
@@ -306,8 +306,164 @@ void alto(int ciclo){
                 }
 
             }
+            if(curso=='m'){
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='M'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+                cout<<"horarios disponibles:\n";
+                cout<<"matematica seccion 1 lun mi vi 7-9 vac:20\n";
+                cout<<"matematica seccion 2 lun mi vi 9-11 vac:20\n";
+                cout<<"matematica seccion 3 lun mi vi 11-13 vac:20\n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3 or niguno= 0 o incorrecto)\n";
+                int cambio;
+                cin>>cambio;// opcion a eligir
+                if(cambio==1){//primero se verifica si hace conflicto en tu horario
+                    char muestra = horario[1][0][0];
+                    char muestra2= horario[1][2][0];
+                    char muestra3= horario[1][4][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    int valor3=int(muestra3);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            if(valor3<90 && valor3>64)cout<<"conflicto"<<endl;
+                            else{
+                                horario[1][0]="M";
+                                horario[1][2]="M";
+                                horario[1][4]="M";
+                            }
+                        }
+                    }
+
+
+                }
+                if(cambio==2){//primero se verifica si hace conflicto en tu horario
+                    char muestra = horario[2][0][0];
+                    char muestra2= horario[2][2][0];
+                    char muestra3= horario[2][4][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    int valor3=int(muestra3);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            if(valor3<90 && valor3>64)cout<<"conflicto"<<endl;
+                            else{
+                                horario[2][0]="M";
+                                horario[2][2]="M";
+                                horario[2][4]="M";
+                            }
+                        }
+                    }
+
+
+                }
+                if(cambio==3){//primero se verifica si hace conflicto en tu horario
+                    char muestra = horario[3][0][0];
+                    char muestra2= horario[3][2][0];
+                    char muestra3= horario[3][4][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    int valor3=int(muestra3);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            if(valor3<90 && valor3>64)cout<<"conflicto"<<endl;
+                            else{
+                                horario[3][0]="M";
+                                horario[3][2]="M";
+                                horario[3][4]="M";
+                            }
+                        }
+                    }
+
+
+                }
+
+
+            }
+            if(curso=='l'){
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='L'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+
+            }
+            if(curso=='e'){
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='E'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+
+            }
+            if(curso=='a'){
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='A'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+
+            }
+            if(curso=='p'){
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='P'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+
+            }
+            if(curso=='d'){
+                for (int y=1;y<8;y++){
+                    for(int x=0;x<5;x++){
+                        if (horario[y][x][0]=='D'){
+                            horario[y][x]=" ";
+                        }
+                    }
+                }
+
+            }
 
         }while(resp==1);
+        for(int i=0;i<8;i++){
+            if(i==0){cout<<"Dias  ";}
+            if(i==1){cout<<"07-09 ";}
+            if(i==2){cout<<"09-11 ";}
+            if(i==3){cout<<"11-13 ";}
+            if(i==4){cout<<"13-15 ";}
+            if(i==5){cout<<"15-17 ";}
+            if(i==6){cout<<"17-19 ";}
+            if(i==7){cout<<"19-21 ";}
+            for(int j=0;j<5;j++){
+
+                cout<<setw(5)<<"|"<<horario[i][j]<<"|";
+            }
+
+            cout<<endl;
+        }
     }
 
 }
