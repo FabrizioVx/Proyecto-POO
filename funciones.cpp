@@ -265,7 +265,7 @@ void alto(int ciclo){
 
                 //Borrado f
                 //comunicando los cursos disponibles
-                cout<<"horarios disponibles:\n";
+                cout<<"horarios disponibles sugeridos:\n";
                 cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:20 prof: Katia Zegarra\n";
                 cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:20 prof: Katia Zegarra\n";
                 cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 o incorrecto)\n";
@@ -412,6 +412,7 @@ void alto(int ciclo){
                 cout<<"labcom seccion 2 mar ju 9-11 vac:20 Prof: \n";
                 cout<<"labcom seccion 3 mi vi 11-13 vac:20 Prof:\n";
                 cout<<"labcom seccion 4 ju vi 11-13 vac:20 Prof:\n";
+                cout<<"labcom seccion 5 ma ju 7-9 vac:20 Prof:\n";
 
                 cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 u otro numero)\n";
                 int cambio;
@@ -435,12 +436,77 @@ void alto(int ciclo){
 
                 }
                 if(cambio==2){
+                    char muestra = horario[2][1][0];
+                    char muestra2= horario[2][3][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][0]="labcom 2";
+                            horario[1][2]="labcom 2";
+                            horario[1][4]="labcom 2";
+                        }
+                    }
 
                 }
                 if(cambio==3){
+                    char muestra = horario[3][2][0];
+                    char muestra2= horario[3][4][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][0]="labcom 2";
+                            horario[1][2]="labcom 2";
+                            horario[1][4]="labcom 2";
+                        }
+                    }
+
 
                 }
                 if(cambio==4){
+                    char muestra = horario[3][3][0];
+                    char muestra2= horario[3][4][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][0]="labcom 2";
+                            horario[1][2]="labcom 2";
+                            horario[1][4]="labcom 2";
+                        }
+                    }
+
+
+                }
+                if(cambio==5){
+                    char muestra = horario[1][1][0];
+                    char muestra2= horario[1][3][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][0]="labcom 2";
+                            horario[1][2]="labcom 2";
+                            horario[1][4]="labcom 2";
+                        }
+                    }
 
                 }
 
