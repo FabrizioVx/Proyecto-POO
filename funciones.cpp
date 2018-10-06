@@ -267,8 +267,8 @@ void alto(int ciclo){
                 //Borrado f
                 //comunicando los cursos disponibles
                 cout<<"horarios disponibles:\n";
-                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:20\n";
-                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:20\n";
+                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:20 prof: Katia Zegarra\n";
+                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:20 prof: Katia Zegarra\n";
                 cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 o incorrecto)\n";
                 int cambio;
                 cin>>cambio;// opcion a eligir
@@ -319,9 +319,9 @@ void alto(int ciclo){
                     }
                 }
                 cout<<"horarios disponibles:\n";
-                cout<<"matematica seccion 1 lun mi vi 7-9 vac:20\n";
-                cout<<"matematica seccion 2 lun mi vi 9-11 vac:20\n";
-                cout<<"matematica seccion 3 lun mi vi 11-13 vac:20\n";
+                cout<<"matematica seccion 1 lun mi vi 7-9 vac:20 prof: Xyobi Chavez\n";
+                cout<<"matematica seccion 2 lun mi vi 9-11 vac:20 prof: Miguel Palomino\n";
+                cout<<"matematica seccion 3 lun mi vi 11-13 vac:20 prof: Xyobi Chavez\n";
                 cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3 or niguno= 0 o incorrecto)\n";
                 int cambio;
                 cin>>cambio;// opcion a eligir
@@ -409,10 +409,10 @@ void alto(int ciclo){
                     }
                 }
                 cout<<"horarios disponibles:\n";
-                cout<<"Labcom seccion 1 lun mi vi 7-9 vac:20\n";
-                cout<<"labcom seccion 2 lun mi vi 9-11 vac:20\n";
-                cout<<"labcom seccion 3 lun mi vi 11-13 vac:20\n";
-                cout<<"labcom seccion 4 lun mi vi 11-13 vac:20\n";
+                cout<<"Labcom seccion 1 lun mi vi 7-9 vac:20 Prof: Carlo Guevara\n";
+                cout<<"labcom seccion 2 lun mi vi 9-11 vac:20 Prof: \n";
+                cout<<"labcom seccion 3 lun mi vi 11-13 vac:20 Prof:\n";
+                cout<<"labcom seccion 4 lun mi vi 11-13 vac:20 Prof:\n";
 
                 cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 u otro numero)\n";
 
