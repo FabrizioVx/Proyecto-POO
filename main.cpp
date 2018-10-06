@@ -10,17 +10,17 @@ int main() {
     cout<<"Proporcione su nombre: "; cin>>nombre;
     cout<<"Proporcione su apellido: "; cin>>apellido;
 
-   int puntos=test();//los puntos
-   cout<<"PUNTAJE TOTAL = "<<puntos<<endl;
+    //int puntos=test();//los puntos
+    //cout<<"PUNTAJE TOTAL = "<<puntos<<endl;
 
     int ciclo;
 
     do{
-        cout<<"//si incluye una letra lo tomaremos como ciclo 1\n";
+        cout<<"Solo contamos con los horarios del 1 y 2 ciclo...\n";
         cout<<"ingrese ciclo: ";
         cin>>ciclo;
     }
-    while(4<ciclo || ciclo<0); //solo hasta quinto ciclo
+    while(2<ciclo || ciclo<1); //solo hasta quinto ciclo
 
 //imprimiendo horario
     alto(ciclo);
