@@ -219,14 +219,14 @@ int test() {
 void alto(int ciclo){
     if (ciclo==2){
                             // Lu--Ma--Mi--Ju--Vi
-        string horario[8][5]={{"L","M","M","J","V"},//dias
-                              {"E","L"," ","L"," "},//7-9
-                              {"A","F"," "," ","F"},//9-11
-                              {"M"," ","M"," ","M"},//11-13
-                              {" ","P"," "," ","P"},//13-15
-                              {"D"," ","D","D"," "},//15-17
-                              {" "," "," "," "," "},//17-19
-                              {" "," "," "," "," "}};//19-21
+        string horario[8][5]={{"        Lunes         ","  Martes ","      Miercoles       ","         Jueves       ","Viernes   "},//dias
+                              {"E. Discrestas 2       ","Lab com 2","                      ","Lab com2              ","          "},//7-9
+                              {"Arte y tecnologia     ","Fisica 2 ","                      ","                      ","Fisica 2  "},//9-11
+                              {"Matematica 2          ","         ","Matematica 2          ","                      ","Matematica"},//11-13
+                              {"                      ","POO 1    ","                      ","                      ","POO 1     "},//13-15
+                              {"Desarrollo de empresas","         ","Desarrollo de empresas","Desarrollo de empresas","          "},//15-17
+                              {"                      ","         ","                      ","                      ","          "},//17-19
+                              {"                      ","         ","                      ","                      ","          "}};//19-21
 
         for(int i=0;i<8;i++){
             if(i==0){cout<<"Dias  ";}
@@ -247,14 +247,15 @@ void alto(int ciclo){
         //se imprime el horario
         int resp=1;//para entrar al loop
         do{
-            cout<<"quieres cambiarlo?(1=si or 0 u otro numero=no)\n";//pregunta si deseas cambiar
+            cout<<"quieres cambiar el horario propuesto?(1=si or 0 u otro numero=no)\n";//pregunta si deseas cambiar
             cin>>resp;
             if(resp!=1)break;//si tu respuesta es no se sale del loop
-            cout<<"que curso quieres cambiar: \n";
-            char curso;
+            cout<<"que curso deseas cambiar?(escriba el curso con el nombre que se ve en el horario): \n";
+            string curso;
             cin>>curso;//se ingresa el curso a cambiar
 
-            if (curso=='f'){//se elimina en toda la matriz el curso elegido
+
+            if (curso[0]=='f' || curso[0]=='F'){//se elimina en toda la matriz el curso elegido
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='F'){
@@ -271,6 +272,7 @@ void alto(int ciclo){
                 cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 o incorrecto)\n";
                 int cambio;
                 cin>>cambio;// opcion a eligir
+
                 if(cambio==1){//primero se verifica si hace conflicto en tu horario
                     char muestra = horario[1][1][0];
                     char muestra2=horario[1][4][0];
@@ -306,7 +308,9 @@ void alto(int ciclo){
                 }
 
             }
-            if(curso=='m'){
+
+
+            if(curso[0]=='m' || curso[0]=='M'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='M'){
@@ -396,7 +400,7 @@ void alto(int ciclo){
 
 
             }
-            if(curso=='l'){
+            if(curso[0]=='l' || curso[0]=='L'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='L'){
@@ -404,9 +408,16 @@ void alto(int ciclo){
                         }
                     }
                 }
+                cout<<"horarios disponibles:\n";
+                cout<<"Labcom seccion 1 lun mi vi 7-9 vac:20\n";
+                cout<<"labcom seccion 2 lun mi vi 9-11 vac:20\n";
+                cout<<"labcom seccion 3 lun mi vi 11-13 vac:20\n";
+                cout<<"labcom seccion 4 lun mi vi 11-13 vac:20\n";
+
+                cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 u otro numero)\n";
 
             }
-            if(curso=='e'){
+            if(curso[0]=='e' || curso[0]=='E'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='E'){
@@ -416,7 +427,7 @@ void alto(int ciclo){
                 }
 
             }
-            if(curso=='a'){
+            if(curso[0]=='a' || curso[0]=='A'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='A'){
@@ -426,7 +437,7 @@ void alto(int ciclo){
                 }
 
             }
-            if(curso=='p'){
+            if(curso[0]=='p' || curso[0]=='P'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='P'){
@@ -436,7 +447,7 @@ void alto(int ciclo){
                 }
 
             }
-            if(curso=='d'){
+            if(curso[0]=='d' || curso[0]=='D'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='D'){
