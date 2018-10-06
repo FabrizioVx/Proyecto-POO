@@ -218,7 +218,7 @@ int test() {
 
 void alto(int ciclo){
     if (ciclo==2){
-                            // Lu--Ma--Mi--Ju--Vi
+        // Lu--Ma--Mi--Ju--Vi
         string horario[8][5]={{"        Lunes         ","  Martes ","      Miercoles       ","         Jueves       ","Viernes   "},//dias
                               {"E. Discrestas 2       ","Lab com 2","                      ","Lab com2              ","          "},//7-9
                               {"Arte y tecnologia     ","Fisica 2 ","                      ","                      ","Fisica 2  "},//9-11
@@ -227,7 +227,6 @@ void alto(int ciclo){
                               {"Desarrollo de empresas","         ","Desarrollo de empresas","Desarrollo de empresas","          "},//15-17
                               {"                      ","         ","                      ","                      ","          "},//17-19
                               {"                      ","         ","                      ","                      ","          "}};//19-21
-
         for(int i=0;i<8;i++){
             if(i==0){cout<<"Dias  ";}
             if(i==1){cout<<"07-09 ";}
@@ -259,7 +258,7 @@ void alto(int ciclo){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='F'){
-                            horario[y][x]=" ";
+                            horario[y][x]="                      ";
                         }
                     }
                 }
@@ -282,8 +281,8 @@ void alto(int ciclo){
                     else{
                         if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
                         else{
-                            horario[1][1]="F";
-                            horario[1][4]="F";
+                            horario[1][1]="Fisica 2";
+                            horario[1][4]="Fisica 2";
                         }
                     }
 
@@ -299,8 +298,8 @@ void alto(int ciclo){
                     else{
                         if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
                         else{
-                            horario[2][1]="F";
-                            horario[2][4]="F";
+                            horario[2][1]="Fisica 2";
+                            horario[2][4]="Fisica 2";
                         }
                     }
 
@@ -340,9 +339,9 @@ void alto(int ciclo){
                         else{
                             if(valor3<90 && valor3>64)cout<<"conflicto"<<endl;
                             else{
-                                horario[1][0]="M";
-                                horario[1][2]="M";
-                                horario[1][4]="M";
+                                horario[1][0]="Matematica 2";
+                                horario[1][2]="Matematica 2";
+                                horario[1][4]="Matematica 2";
                             }
                         }
                     }
@@ -364,9 +363,9 @@ void alto(int ciclo){
                         else{
                             if(valor3<90 && valor3>64)cout<<"conflicto"<<endl;
                             else{
-                                horario[2][0]="M";
-                                horario[2][2]="M";
-                                horario[2][4]="M";
+                                horario[2][0]="Matematica 2";
+                                horario[2][2]="Matematica 2";
+                                horario[2][4]="Matematica 2";
                             }
                         }
                     }
@@ -388,9 +387,9 @@ void alto(int ciclo){
                         else{
                             if(valor3<90 && valor3>64)cout<<"conflicto"<<endl;
                             else{
-                                horario[3][0]="M";
-                                horario[3][2]="M";
-                                horario[3][4]="M";
+                                horario[3][0]="Matematica 2";
+                                horario[3][2]="Matematica 2";
+                                horario[3][4]="Matematica 2";
                             }
                         }
                     }
@@ -409,12 +408,42 @@ void alto(int ciclo){
                     }
                 }
                 cout<<"horarios disponibles:\n";
-                cout<<"Labcom seccion 1 lun mi vi 7-9 vac:20 Prof: Carlo Guevara\n";
-                cout<<"labcom seccion 2 lun mi vi 9-11 vac:20 Prof: \n";
-                cout<<"labcom seccion 3 lun mi vi 11-13 vac:20 Prof:\n";
-                cout<<"labcom seccion 4 lun mi vi 11-13 vac:20 Prof:\n";
+                cout<<"Labcom seccion 1 lun  vi 7-9 vac:20 Prof: Carlo Guevara\n";
+                cout<<"labcom seccion 2 mar ju 9-11 vac:20 Prof: \n";
+                cout<<"labcom seccion 3 mi vi 11-13 vac:20 Prof:\n";
+                cout<<"labcom seccion 4 ju vi 11-13 vac:20 Prof:\n";
 
                 cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 u otro numero)\n";
+                int cambio;
+                cin>>cambio;// opcion a eligir
+                if(cambio==1){
+                    char muestra = horario[1][0][0];
+                    char muestra2= horario[1][4][0];
+
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][0]="labcom 2";
+                            horario[1][2]="labcom 2";
+                            horario[1][4]="labcom 2";
+                        }
+                    }
+
+                }
+                if(cambio==2){
+
+                }
+                if(cambio==3){
+
+                }
+                if(cambio==4){
+
+                }
+
 
             }
             if(curso[0]=='e' || curso[0]=='E'){
