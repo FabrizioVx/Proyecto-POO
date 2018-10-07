@@ -228,7 +228,7 @@ void alto(int ciclo){
                               {"                      ","         ","                      ","                      ","            "},//17-19
                               {"                      ","         ","                      ","                      ","            "}};//19-21
         for(int i=0;i<8;i++){
-            if(i==0){cout<<"Dias  ";}
+            if(i==0){cout<<"Dias: ";}
             if(i==1){cout<<"07-09 ";}
             if(i==2){cout<<"09-11 ";}
             if(i==3){cout<<"11-13 ";}
@@ -253,7 +253,7 @@ void alto(int ciclo){
             string curso;
             cin>>curso;//se ingresa el curso a cambiar
 
-
+            //fisica 2
             if (curso[0]=='f' || curso[0]=='F'){//se elimina en toda la matriz el curso elegido
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -266,8 +266,8 @@ void alto(int ciclo){
                 //Borrado f
                 //comunicando los cursos disponibles
                 cout<<"horarios disponibles sugeridos:\n";
-                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 vac:20 prof: Katia Zegarra\n";
-                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 vac:20 prof: Katia Zegarra\n";
+                cout<<"fisica seccion 1 mar 7-9 and vi 7-9 prof: Katia Zegarra\n";
+                cout<<"fisica seccion 2 mar 9-11 and vi 9-11 prof: Katia Zegarra\n";
                 cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 o incorrecto)\n";
                 int cambio;
                 cin>>cambio;// opcion a eligir
@@ -308,7 +308,7 @@ void alto(int ciclo){
 
             }
 
-
+            //matematica 2
             if(curso[0]=='m' || curso[0]=='M'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -318,9 +318,9 @@ void alto(int ciclo){
                     }
                 }
                 cout<<"horarios disponibles:\n";
-                cout<<"matematica seccion 1 lun mi vi 7-9 vac:20 prof: Xyobi Chavez\n";
-                cout<<"matematica seccion 2 lun mi vi 9-11 vac:20 prof: Miguel Palomino\n";
-                cout<<"matematica seccion 3 lun mi vi 11-13 vac:20 prof: Xyobi Chavez\n";
+                cout<<"matematica 2 seccion 1 lun mi vi 7-9 prof: Xyobi Chavez\n";
+                cout<<"matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino\n";
+                cout<<"matematica 2 seccion 3 lun mi vi 11-13 prof: Xyobi Chavez\n";
                 cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3 or niguno= 0 o incorrecto)\n";
                 int cambio;
                 cin>>cambio;// opcion a eligir
@@ -399,6 +399,7 @@ void alto(int ciclo){
 
 
             }
+            //labcom2
             if(curso[0]=='l' || curso[0]=='L'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -408,11 +409,11 @@ void alto(int ciclo){
                     }
                 }
                 cout<<"horarios disponibles:\n";
-                cout<<"Labcom seccion 1 lun  vi 7-9 vac:20 Prof: Carlo Guevara\n";
-                cout<<"labcom seccion 2 mar ju 9-11 vac:20 Prof: \n";
-                cout<<"labcom seccion 3 mi vi 11-13 vac:20 Prof:\n";
-                cout<<"labcom seccion 4 ju vi 11-13 vac:20 Prof:\n";
-                cout<<"labcom seccion 5 ma ju 7-9 vac:20 Prof:\n";
+                cout<<"Labcom 2 seccion 1 lun  vi 7-9 Prof: Carlo Guevara\n";
+                cout<<"labcom 2 seccion 2 mar ju 9-11 Prof: \n";
+                cout<<"labcom 2 seccion 3 mi vi 11-13 Prof:\n";
+                cout<<"labcom 2 seccion 4 ju vi 11-13 Prof:\n";
+                cout<<"labcom 2 seccion 5 ma ju 7-9 Prof:\n";
 
                 cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 u otro numero)\n";
                 int cambio;
@@ -512,6 +513,8 @@ void alto(int ciclo){
 
 
             }
+
+            //Estrucutra discretas 2
             if(curso[0]=='e' || curso[0]=='E'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -521,7 +524,9 @@ void alto(int ciclo){
                     }
                 }
 
+
             }
+            //arte u tecnologia
             if(curso[0]=='a' || curso[0]=='A'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -530,8 +535,30 @@ void alto(int ciclo){
                         }
                     }
                 }
+                cout<<"horarios disponibles sugeridos:\n";
+                cout<<"Arte y tecnologia seccion 1 lun 9-11 prof: \n";
+                cout<<"Arte y tecnologia seccion 2 lun 9-11 prof: \n";
+                cout<<"Arte y tecnologia seccion 3 vi 11-13 prof: \n";
+                cout<<"Arte y tecnologia seccion 4 ju 9-11 prof: \n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 o incorrecto)\n";
+                int cambio;
+                cin>>cambio;// opcion a eligir
+                if(cambio==1){
+
+                }
+                if(cambio==2){
+
+                }
+                if(cambio==3){
+
+                }
+                if(cambio==4){
+
+                }
+
 
             }
+            //POO1
             if(curso[0]=='p' || curso[0]=='P'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -540,8 +567,72 @@ void alto(int ciclo){
                         }
                     }
                 }
+                cout<<"horarios disponibles sugeridos:\n";
+                cout<<"POO 1 seccion 1 mar 13-15 and vi 13-15 prof: Cuadros\n";
+                cout<<"POO 1 seccion 2 mar 7-9 and ju 9-11 prof: Bernejo\n";
+                cout<<"POO 1 seccion 3 mar 19-21 and vi 19-21 prof: Melgrejo\n";
+                cout<<"POO 1 seccion 4 lun 17-15 and vi 13-15 prof: Kenneth\n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 o incorrecto)\n";
+                int cambio;cin>>cambio;// opcion a eligir
+                if(cambio==1){
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[1][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="POO 1";
+                            horario[1][4]="POO 1";
+                        }
+                    }
+                }
+                if(cambio==2){
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[1][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="POO 1";
+                            horario[1][4]="POO 1";
+                        }
+                    }
+                }
+                if(cambio==3){
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[1][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="POO 1";
+                            horario[1][4]="POO 1";
+                        }
+                    }
+                }
+                if(cambio==4){
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[1][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="POO 1";
+                            horario[1][4]="POO 1";
+                        }
+                    }
 
+                }
             }
+            //Desarrollo de empresas
             if(curso[0]=='d' || curso[0]=='D'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
@@ -550,10 +641,86 @@ void alto(int ciclo){
                         }
                     }
                 }
+                cout<<"horarios disponibles sugeridos:\n";
+                cout<<"Desarrollo de empresas seccion 1 lun 7-9 prof:Guevara \n";
+                cout<<"Desarrollo de empresas seccion 2 vi 9-11 prof:Zorrilla \n";
+                cout<<"Desarrollo de empresas seccion 3 mi 11-13 prof:Camacho \n";
+                cout<<"Desarrollo de empresas seccion 4 ma 17-19 prof:Guevara \n";
+                cout<<"Desarrollo de empresas seccion 4 ma 19-21 prof:Guevara \n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 o incorrecto)\n";
+                int cambio;
+                cin>>cambio;// opcion a eligir
+                if(cambio==1){
+                    char muestra = horario[1][0][0];
+
+                    int valor = int(muestra);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        horario[1][1]="Desarrollo de empresas";
+                        horario[1][4]="Desarrollo de empresas";
+                    }
+
+                }
+                if(cambio==2){
+                    char muestra = horario[2][4][0];
+
+                    int valor = int(muestra);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        horario[1][1]="Desarrollo de empresas";
+                        horario[1][4]="Desarrollo de empresas";
+                    }
+
+
+                }
+                if(cambio==3){
+                    char muestra = horario[3][2][0];
+
+                    int valor = int(muestra);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        horario[1][1]="Desarrollo de empresas";
+                        horario[1][4]="Desarrollo de empresas";
+                    }
+
+
+                }
+                if(cambio==4){
+                    char muestra = horario[5][1][0];
+
+                    int valor = int(muestra);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        horario[1][1]="Desarrollo de empresas";
+                        horario[1][4]="Desarrollo de empresas";
+                    }
+
+
+                }
+                if(cambio==5){
+                    char muestra = horario[6][1][0];
+
+                    int valor = int(muestra);
+
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        horario[1][1]="Desarrollo de empresas";
+                        horario[1][4]="Desarrollo de empresas";
+                    }
+
+
+                }
+
 
             }
 
         }while(resp==1);
+
+
         for(int i=0;i<8;i++){
             if(i==0){cout<<"Dias  ";}
             if(i==1){cout<<"07-09 ";}
