@@ -219,14 +219,14 @@ int test() {
 void alto(int ciclo){
     if (ciclo==2){
         // Lu--Ma--Mi--Ju--Vi
-        string horario[8][5]={{"        Lunes         ","  Martes ","      Miercoles       ","         Jueves       ","Viernes   "},//dias
-                              {"E. Discrestas 2       ","Lab com 2","                      ","Lab com2              ","          "},//7-9
-                              {"Arte y tecnologia     ","Fisica 2 ","                      ","                      ","Fisica 2  "},//9-11
-                              {"Matematica 2          ","         ","Matematica 2          ","                      ","Matematica"},//11-13
-                              {"                      ","POO 1    ","                      ","                      ","POO 1     "},//13-15
-                              {"Desarrollo de empresas","         ","Desarrollo de empresas","Desarrollo de empresas","          "},//15-17
-                              {"                      ","         ","                      ","                      ","          "},//17-19
-                              {"                      ","         ","                      ","                      ","          "}};//19-21
+        string horario[8][5]={{"        Lunes         ","  Martes ","      Miercoles       ","         Jueves       ","Viernes     "},//dias
+                              {"E. Discrestas 2       ","Lab com 2","                      ","                      ","            "},//7-9
+                              {"Arte y tecnologia     ","Fisica 2 ","                      ","                      ","Fisica 2    "},//9-11
+                              {"Matematica 2          ","         ","Matematica 2          ","                      ","Matematica 2"},//11-13
+                              {"                      ","POO 1    ","                      ","Lab com 2             ","POO 1       "},//13-15
+                              {"Desarrollo de empresas","         ","Desarrollo de empresas","Desarrollo de empresas","            "},//15-17
+                              {"                      ","         ","                      ","                      ","            "},//17-19
+                              {"                      ","         ","                      ","                      ","            "}};//19-21
         for(int i=0;i<8;i++){
             if(i==0){cout<<"Dias  ";}
             if(i==1){cout<<"07-09 ";}
@@ -493,7 +493,7 @@ void alto(int ciclo){
                 }
                 if(cambio==5){
                     char muestra = horario[1][1][0];
-                    char muestra2= horario[1][3][0];
+                    char muestra2= horario[4][3][0];
 
                     int valor = int(muestra);
                     int valor2=int(muestra2);
