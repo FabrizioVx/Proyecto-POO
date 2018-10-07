@@ -515,7 +515,7 @@ void alto(int ciclo){
             }
 
             //Estrucutra discretas 2
-            if(curso[0]=='e' || curso[0]=='E'){
+            iif(curso[0]=='e' || curso[0]=='E'){
                 for (int y=1;y<8;y++){
                     for(int x=0;x<5;x++){
                         if (horario[y][x][0]=='E'){
@@ -523,7 +523,40 @@ void alto(int ciclo){
                         }
                     }
                 }
-
+                cout<<"horarios disponibles sugeridos:\n";
+                cout<<"Estructuras discretas II seccion 1 lun-Martes-Jueves 07-09 profesor: Jose Miguel Renom: \n";
+                cout<<"Estructuras discretas II seccion 2 lun-Martes-viernes- 11-13 prof: Yamilet Serrano \n";
+                cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 o incorrecto)\n";
+                int cambio;
+                cin>>cambio;// opcion a eligir
+                if(cambio==1){
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[2][3][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="Discretas II";
+                            horario[2][3]="Discretas II";
+                        }
+                    }
+                }
+                if(cambio==2){
+                    char muestra = horario[1][1][0];
+                    char muestra2=horario[1][4][0];
+                    int valor = int(muestra);
+                    int valor2=int(muestra2);
+                    if(valor<90 && valor>64)cout<<"conflicto"<<endl;
+                    else{
+                        if(valor2<90 && valor2>64)cout<<"conflicto"<<endl;
+                        else{
+                            horario[1][1]="Discretas II";
+                            horario[1][4]="Discretas II";
+                        }
+                    }
+                }
 
             }
             //arte u tecnologia
