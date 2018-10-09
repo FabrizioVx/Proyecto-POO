@@ -237,21 +237,21 @@ void eliminacion(string curso, string matriz[8][5]){
     for (int y=1;y<8;y++){
         for(int x=0;x<5;x++){
             if (matriz[y][x][0]==toupper(curso[0])){
-                matriz[y][x]=" ";
+                matriz[y][x]= "                      ";
             }
         }
     }
 }
 void alto(int ciclo){
     if(ciclo==1){
-        string horario[8][5]={{"LUNES       ","MARTES   ","MIERCOLES   ","JUEVES","VIERNES     "},//dias
-                              {"            ","         ","            ","      ","            "},//7-9
-                              {"            ","         ","MATEMATICA 1","      ","            "},//9-11
-                              {"MATEMATICA 1","LAB COM 1","            ","      ","            "},//11-13
-                              {"            ","         ","DESAFIOS G. ","      ","MATEMATICA 1"},//13-15
-                              {"QUIMICA     ","ICC      ","LAB COM 1   ","      ","ICC         "},//15-17
-                              {"            ","         ","            ","      ","            "},//17-19
-                              {"            ","         ","            ","      ","            "}};//19-21
+        string horario[8][5]={{"        LUNES         ","        MARTES        ","       MIERCOLES      ","       JUEVES         ","        VIERNES       "},//dias
+                              {"                      ","                      ","                      ","                      ","                      "},//7-9
+                              {"                      ","                      ","MATEMATICA 1          ","                      ","                      "},//9-11
+                              {"MATEMATICA 1          ","LAB COM 1             ","                      ","                      ","                      "},//11-13
+                              {"                      ","                      ","DESAFIOS G.           ","                      ","MATEMATICA 1          "},//13-15
+                              {"QUIMICA               ","ICC                   ","LAB COM 1             ","                      ","ICC                   "},//15-17
+                              {"                      ","                      ","                      ","                      ","                      "},//17-19
+                              {"                      ","                      ","                      ","                      ","                      "}};//19-21
 
         imprimir(horario);
         int resp=1;//para entrar al loop
@@ -381,14 +381,14 @@ void alto(int ciclo){
     }
     if (ciclo==2){
         // Lu--Ma--Mi--Ju--Vi
-        string horario[8][5]={{"        Lunes         ","  Martes ","      Miercoles       ","         Jueves       ","Viernes     "},//dias
-                              {"E. Discrestas 2       ","Lab com 2","                      ","                      ","            "},//7-9
-                              {"Arte y tecnologia     ","Fisica 2 ","E. Discrestas 2       ","E. Discrestas 2       ","Fisica 2    "},//9-11
-                              {"Matematica 2          ","         ","Matematica 2          ","                      ","Matematica 2"},//11-13
-                              {"                      ","POO 1    ","                      ","Lab com 2             ","POO 1       "},//13-15
-                              {"Desarrollo de empresas","         ","Desarrollo de empresas","Desarrollo de empresas","            "},//15-17
-                              {"                      ","         ","                      ","                      ","            "},//17-19
-                              {"                      ","         ","                      ","                      ","            "}};//19-21
+        string horario[8][5]={{"        Lunes         ","         Martes       ","      Miercoles       ","         Jueves       ","        Viernes       "},//dias
+                              {"E. Discrestas 2       ","Lab com 2             ","                      ","                      ","                      "},//7-9
+                              {"Arte y tecnologia     ","Fisica 2              ","E. Discrestas 2       ","E. Discrestas 2       ","Fisica 2              "},//9-11
+                              {"Matematica 2          ","                      ","Matematica 2          ","                      ","Matematica 2          "},//11-13
+                              {"                      ","POO 1                 ","                      ","Lab com 2             ","POO 1                 "},//13-15
+                              {"Desarrollo de empresas","                      ","Desarrollo de empresas","Desarrollo de empresas","                      "},//15-17
+                              {"                      ","                      ","                      ","                      ","                      "},//17-19
+                              {"                      ","                      ","                      ","                      ","                      "}};//19-21
         imprimir(horario);
         //se imprime el horario
         int resp=1;//para entrar al loop
@@ -1048,4 +1048,7 @@ void alto(int ciclo){
         imprimir(horario);
     }
 
+}
+void normales(int ciclo){
+    
 }
