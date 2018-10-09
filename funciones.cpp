@@ -493,9 +493,9 @@ void alto(int ciclo){
                                     if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else{
                                         eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                        horario[1][0]="Matematica 2";
-                                        horario[1][2]="Matematica 2";
-                                        horario[1][4]="Matematica 2";
+                                        horario[1][0]="Matematica 2          ";
+                                        horario[1][2]="Matematica 2          ";
+                                        horario[1][4]="Matematica 2          ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
@@ -521,9 +521,9 @@ void alto(int ciclo){
                                     if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else{
                                         eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                        horario[2][0]="Matematica 2";
-                                        horario[2][2]="Matematica 2";
-                                        horario[2][4]="Matematica 2";
+                                        horario[2][0]="Matematica 2          ";
+                                        horario[2][2]="Matematica 2          ";
+                                        horario[2][4]="Matematica 2          ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
@@ -549,9 +549,9 @@ void alto(int ciclo){
                                     if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else{
                                         eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                        horario[3][0]="Matematica 2";
-                                        horario[3][2]="Matematica 2";
-                                        horario[3][4]="Matematica 2";
+                                        horario[3][0]="Matematica 2          ";
+                                        horario[3][2]="Matematica 2          ";
+                                        horario[3][4]="Matematica 2          ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
@@ -596,8 +596,8 @@ void alto(int ciclo){
                                     cout << "conflicto" << endl;
                                 else {
                                     eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                    horario[1][0] = "Lab com 2";
-                                    horario[1][4] = "Lab com 2";
+                                    horario[1][0] = "Lab com 2             ";
+                                    horario[1][4] = "Lab com 2             ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -617,8 +617,8 @@ void alto(int ciclo){
                                     cout << "conflicto" << endl;
                                 else {
                                     eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                    horario[2][1] = "Lab com 2";
-                                    horario[2][3] = "Lab com 2";
+                                    horario[2][1] = "Lab com 2             ";
+                                    horario[2][3] = "Lab com 2             ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -639,8 +639,8 @@ void alto(int ciclo){
                                     cout << "conflicto" << endl;
                                 else {
                                     eliminacion(curso, horario);
-                                    horario[3][2] = "Lab com 2";
-                                    horario[3][4] = "Lab com 2";
+                                    horario[3][2] = "Lab com 2             ";
+                                    horario[3][4] = "Lab com 2             ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -661,8 +661,8 @@ void alto(int ciclo){
                                     cout << "conflicto" << endl;
                                 else {
                                     eliminacion(curso, horario);
-                                    horario[3][3] = "Lab com 2";
-                                    horario[3][4] = "Lab com 2";
+                                    horario[3][3] = "Lab com 2             ";
+                                    horario[3][4] = "Lab com 2             ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -683,8 +683,8 @@ void alto(int ciclo){
                                     cout << "conflicto" << endl;
                                 else {
                                     eliminacion(curso, horario);
-                                    horario[1][1] = "Lab com 2";
-                                    horario[4][3] = "Lab com 2";
+                                    horario[1][1] = "Lab com 2             ";
+                                    horario[4][3] = "Lab com 2             ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -722,8 +722,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[4][1]="POO 1";
-                                    horario[4][4]="POO 1";
+                                    horario[4][1]="POO 1                 ";
+                                    horario[4][4]="POO 1                 ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -741,8 +741,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[1][1]="POO 1";
-                                    horario[2][3]="POO 1";
+                                    horario[1][1]="POO 1                 ";
+                                    horario[2][3]="POO 1                 ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -760,8 +760,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[7][1]="POO 1";
-                                    horario[7][4]="POO 1";
+                                    horario[7][1]="POO 1                 ";
+                                    horario[7][4]="POO 1                 ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -779,8 +779,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[6][1]="POO 1";
-                                    horario[4][4]="POO 1";
+                                    horario[6][1]="POO 1                 ";
+                                    horario[4][4]="POO 1                 ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -915,9 +915,9 @@ void alto(int ciclo){
                                     if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else {
                                         eliminacion(curso,horario);
-                                        horario[4][0] = "E. Discrestas 2";
-                                        horario[4][2] = "E. Discrestas 2";
-                                        horario[1][3] = "E. Discrestas 2";
+                                        horario[4][0] = "E. Discrestas 2       ";
+                                        horario[4][2] = "E. Discrestas 2       ";
+                                        horario[1][3] = "E. Discrestas 2       ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
@@ -940,9 +940,9 @@ void alto(int ciclo){
                                     if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))cout << "conflicto" << endl;
                                     else {
                                         eliminacion(curso,horario);
-                                        horario[3][0] = "E. Discrestas 2";
-                                        horario[6][1] = "E. Discrestas 2";
-                                        horario[2][4] = "E. Discrestas 2";
+                                        horario[3][0] = "E. Discrestas 2       ";
+                                        horario[6][1] = "E. Discrestas 2       ";
+                                        horario[2][4] = "E. Discrestas 2       ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
 
@@ -980,7 +980,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[2][0]="Arte y tecnologia";
+                                horario[2][0]="Arte y tecnologia     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -995,7 +995,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[2][0]="Arte y tecnologia";
+                                horario[2][0]="Arte y tecnologia     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -1010,7 +1010,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);
-                                horario[3][4]="Arte y tecnologia";
+                                horario[3][4]="Arte y tecnologia     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -1025,7 +1025,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);
-                                horario[2][3]="Arte y tecnologia";
+                                horario[2][3]="Arte y tecnologia     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -1050,5 +1050,5 @@ void alto(int ciclo){
 
 }
 void normales(int ciclo){
-    
+
 }
