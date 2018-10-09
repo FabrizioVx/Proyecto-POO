@@ -275,7 +275,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){}
                         if(cambio==2){}
 
@@ -295,7 +295,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){}
                         if(cambio==2){}
                         if(cambio==3){}
@@ -315,7 +315,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){}
                         if(cambio==2){}
 
@@ -337,7 +337,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){}
                         if(cambio==2){}
                         if(cambio==3){}
@@ -362,7 +362,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){}
                         if(cambio==2){}
                         if(cambio==3){}
@@ -416,7 +416,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
                             char muestra = horario[1][1][0];
@@ -474,7 +474,7 @@ void alto(int ciclo){
                         cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
                         cin>>cambio;// opcion a
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -582,7 +582,7 @@ void alto(int ciclo){
 
                         cin >> cambio;// opcion
                         if (cambio == 0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
 
                         if (cambio == 1) {//primero se verifica si hace conflicto en tu horario
 
@@ -709,7 +709,7 @@ void alto(int ciclo){
                         cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
                         cin>>cambio;// opcion a
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -807,7 +807,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -899,7 +899,7 @@ void alto(int ciclo){
 
                         cin>>cambio;
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
                         if(cambio==1){
                             char muestra = horario[1][0][0];
                             char muestra2=horario[2][2][0];
@@ -969,7 +969,7 @@ void alto(int ciclo){
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-                        if(cambio==-1)eliminacion(curso,horario);
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
