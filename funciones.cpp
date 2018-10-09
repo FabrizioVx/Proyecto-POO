@@ -271,10 +271,11 @@ void alto(int ciclo){
                         cout<<"horarios disponibles sugeridos:\n";
                         cout<<"Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez\n";
                         cout<<"Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Xyoby Chavez\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){}
                         if(cambio==2){}
 
@@ -290,10 +291,11 @@ void alto(int ciclo){
                         cout<<"Quimica general seccion 2 lu 15-17 prof: Pinedo\n";
                         cout<<"Quimica general seccion 3 mi 15-17 prof: Hoyos\n";
                         cout<<"Quimica general seccion 4 mi 13-15 prof: Ratti\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){}
                         if(cambio==2){}
                         if(cambio==3){}
@@ -309,10 +311,11 @@ void alto(int ciclo){
                         cout<<"horarios disponibles sugeridos:\n";
 
 
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){}
                         if(cambio==2){}
 
@@ -330,10 +333,11 @@ void alto(int ciclo){
                         cout<<"ICC seccion 4 lu 13-15 and vi 13-15 prof: Kenneth\n";
                         cout<<"ICC seccion 5 lu 11-13 and vi 19-21 prof: Alvarado\n";
                         cout<<"ICC seccion 6 mi 15-17 and vi 15-17 prof: Flores\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, seccion 6=6 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, seccion 6=6, borrar curso=-1 or niguno= 0 )\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){}
                         if(cambio==2){}
                         if(cambio==3){}
@@ -354,10 +358,11 @@ void alto(int ciclo){
                         cout<<"Lab com 1 seccion 3 mi 17-19 and vi 13-15 prof: Hidalgo\n";
                         cout<<"Lab com 1 seccion 4 lu 15-16 and vi 9-11 prof: Ramirez\n";
                         cout<<"Lab com 1 seccion 5 ma 11-13 and mi 15-17 prof: Corzo\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0 )\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){}
                         if(cambio==2){}
                         if(cambio==3){}
@@ -372,22 +377,7 @@ void alto(int ciclo){
             }
         }while(resp!=0);
 
-        for(int i=0;i<8;i++){
-            if(i==0){cout<<"Dias  ";}
-            if(i==1){cout<<"07-09 ";}
-            if(i==2){cout<<"09-11 ";}
-            if(i==3){cout<<"11-13 ";}
-            if(i==4){cout<<"13-15 ";}
-            if(i==5){cout<<"15-17 ";}
-            if(i==6){cout<<"17-19 ";}
-            if(i==7){cout<<"19-21 ";}
-            for(int j=0;j<5;j++){
-
-                cout<<setw(5)<<"|"<<horario[i][j]<<"|";
-            }
-
-            cout<<endl;
-        }
+        imprimir(horario);
     }
     if (ciclo==2){
         // Lu--Ma--Mi--Ju--Vi
@@ -422,11 +412,11 @@ void alto(int ciclo){
                         cout<<"horarios disponibles sugeridos:\n";
                         cout<<"fisica seccion 1 mar 7-9 and vi 7-9 prof: Katia Zegarra\n";
                         cout<<"fisica seccion 2 mar 9-11 and vi 9-11 prof: Katia Zegarra\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 niguno= 0 )\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
-
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
                             char muestra = horario[1][1][0];
@@ -440,6 +430,8 @@ void alto(int ciclo){
                                     eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
                                     horario[1][1]="Fisica 2";
                                     horario[1][4]="Fisica 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -459,6 +451,8 @@ void alto(int ciclo){
                                     eliminacion(curso,horario);
                                     horario[2][1]="Fisica 2";
                                     horario[2][4]="Fisica 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -477,9 +471,10 @@ void alto(int ciclo){
                         cout<<"matematica 2 seccion 1 lun mi vi 7-9 prof: Xyobi Chavez\n";
                         cout<<"matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino\n";
                         cout<<"matematica 2 seccion 3 lun mi vi 11-13 prof: Xyobi Chavez\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
                         cin>>cambio;// opcion a
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -501,6 +496,8 @@ void alto(int ciclo){
                                         horario[1][0]="Matematica 2";
                                         horario[1][2]="Matematica 2";
                                         horario[1][4]="Matematica 2";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
                                     }
                                 }
                             }
@@ -527,6 +524,8 @@ void alto(int ciclo){
                                         horario[2][0]="Matematica 2";
                                         horario[2][2]="Matematica 2";
                                         horario[2][4]="Matematica 2";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
                                     }
                                 }
                             }
@@ -553,6 +552,8 @@ void alto(int ciclo){
                                         horario[3][0]="Matematica 2";
                                         horario[3][2]="Matematica 2";
                                         horario[3][4]="Matematica 2";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
                                     }
                                 }
                             }
@@ -575,12 +576,13 @@ void alto(int ciclo){
                         cout << "labcom 2 seccion 3 mi  11-13 vi 11-13 Prof:\n";
                         cout << "labcom 2 seccion 4 ju 11-13 vi 11-13 Prof:\n";
                         cout << "labcom 2 seccion 5 ma 7-9 ju 13-15 Prof:\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5 or niguno= 0)\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
 
 
 
                         cin >> cambio;// opcion
                         if (cambio == 0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
 
                         if (cambio == 1) {//primero se verifica si hace conflicto en tu horario
 
@@ -596,6 +598,8 @@ void alto(int ciclo){
                                     eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
                                     horario[1][0] = "Lab com 2";
                                     horario[1][4] = "Lab com 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -615,6 +619,8 @@ void alto(int ciclo){
                                     eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
                                     horario[2][1] = "Lab com 2";
                                     horario[2][3] = "Lab com 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -635,6 +641,8 @@ void alto(int ciclo){
                                     eliminacion(curso, horario);
                                     horario[3][2] = "Lab com 2";
                                     horario[3][4] = "Lab com 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -655,6 +663,8 @@ void alto(int ciclo){
                                     eliminacion(curso, horario);
                                     horario[3][3] = "Lab com 2";
                                     horario[3][4] = "Lab com 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -675,6 +685,8 @@ void alto(int ciclo){
                                     eliminacion(curso, horario);
                                     horario[1][1] = "Lab com 2";
                                     horario[4][3] = "Lab com 2";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -694,9 +706,10 @@ void alto(int ciclo){
                         cout<<"POO 1 seccion 2 mar 7-9 and ju 9-11 prof: Bernejo\n";
                         cout<<"POO 1 seccion 3 mar 19-21 and vi 19-21 prof: Melgrejo\n";
                         cout<<"POO 1 seccion 4 lun 17-19 and vi 13-15 prof: Kenneth\n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
                         cin>>cambio;// opcion a
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -711,6 +724,8 @@ void alto(int ciclo){
                                     eliminacion(curso,horario);
                                     horario[4][1]="POO 1";
                                     horario[4][4]="POO 1";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -728,6 +743,8 @@ void alto(int ciclo){
                                     eliminacion(curso,horario);
                                     horario[1][1]="POO 1";
                                     horario[2][3]="POO 1";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -745,6 +762,8 @@ void alto(int ciclo){
                                     eliminacion(curso,horario);
                                     horario[7][1]="POO 1";
                                     horario[7][4]="POO 1";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -762,6 +781,8 @@ void alto(int ciclo){
                                     eliminacion(curso,horario);
                                     horario[6][1]="POO 1";
                                     horario[4][4]="POO 1";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
                                 }
                             }
 
@@ -782,10 +803,11 @@ void alto(int ciclo){
                         cout<<"Desarrollo de empresas seccion 3 mi 11-13 prof:Camacho \n";
                         cout<<"Desarrollo de empresas seccion 4 ma 17-19 prof:Guevara \n";
                         cout<<"Desarrollo de empresas seccion 5 ma 19-21 prof:Guevara \n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5 or niguno= 0)\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -797,6 +819,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
                                 horario[1][0]="Desarrollo de empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -810,6 +834,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
                                 horario[2][4]="Desarrollo de empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -823,6 +849,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);
                                 horario[3][2]="Desarrollo de empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -836,6 +864,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);
                                 horario[6][1]="Desarrollo de empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -849,6 +879,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);
                                 horario[7][1]="Desarrollo de empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -863,10 +895,11 @@ void alto(int ciclo){
                         cout<<"horarios disponibles sugeridos:\n";
                         cout<<"Estructuras discretas II seccion 1 lun 07-09, Miercoles 09-11, Jueves 09-11 profesor: Jose Miguel Renom: \n";
                         cout<<"Estructuras discretas II seccion 2 lun 11-13, Martes 17-19, Viernes 9-11 prof: Yamilet Serrano \n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2 o niguno= 0 )\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 o niguno= 0 )\n";
 
                         cin>>cambio;
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
                         if(cambio==1){
                             char muestra = horario[1][0][0];
                             char muestra2=horario[2][2][0];
@@ -885,9 +918,12 @@ void alto(int ciclo){
                                         horario[1][0] = "E. Discrestas 2";
                                         horario[2][2] = "E. Discrestas 2";
                                         horario[2][3] = "E. Discrestas 2";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
                                     }
                                 }
                             }
+
                         }
                         if(cambio==2) {
                             char muestra = horario[3][0][0];
@@ -907,6 +943,8 @@ void alto(int ciclo){
                                         horario[3][0] = "E. Discrestas 2";
                                         horario[6][1] = "E. Discrestas 2";
                                         horario[2][4] = "E. Discrestas 2";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
 
                                     }
                                 }
@@ -927,10 +965,11 @@ void alto(int ciclo){
                         cout<<"Arte y tecnologia seccion 2 lun 9-11 prof: \n";
                         cout<<"Arte y tecnologia seccion 3 vi 11-13 prof: \n";
                         cout<<"Arte y tecnologia seccion 4 ju 9-11 prof: \n";
-                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4 or niguno= 0 o incorrecto)\n";
+                        cout<<"cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 o incorrecto)\n";
 
                         cin>>cambio;// opcion
                         if(cambio==0)break;
+                        if(cambio==-1)eliminacion(curso,horario);
 
                         if(cambio==1){//primero se verifica si hace conflicto en tu horario
 
@@ -942,6 +981,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
                                 horario[2][0]="Arte y tecnologia";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -955,6 +996,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
                                 horario[2][0]="Arte y tecnologia";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -968,6 +1011,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);
                                 horario[3][4]="Arte y tecnologia";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
@@ -981,6 +1026,8 @@ void alto(int ciclo){
                             else{
                                 eliminacion(curso,horario);
                                 horario[2][3]="Arte y tecnologia";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
                             }
 
                         }
