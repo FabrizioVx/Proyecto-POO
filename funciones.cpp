@@ -915,9 +915,9 @@ void alto(int ciclo){
                                     if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else {
                                         eliminacion(curso,horario);
-                                        horario[1][0] = "E. Discrestas 2";
-                                        horario[2][2] = "E. Discrestas 2";
-                                        horario[2][3] = "E. Discrestas 2";
+                                        horario[4][0] = "E. Discrestas 2";
+                                        horario[4][2] = "E. Discrestas 2";
+                                        horario[1][3] = "E. Discrestas 2";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
