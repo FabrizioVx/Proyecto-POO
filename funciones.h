@@ -14,4 +14,5 @@ auto verificacion_let(char letra);// verifica la letra del test debe ser a b c d
 void alto(int ciclo);
 void imprimir(string horario[8][5]);
 
+
 #endif //PROYECTO_1_FUNCIONES_H
