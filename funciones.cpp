@@ -30,7 +30,7 @@ string horarios( int ciclo,char curso){
 if(curso=='I'){
             a="horarios disponibles sugeridos:\n"
               "ICC seccion 1 ma 7-9 and mi 15-17 prof: Cuadros DIFICULTAD: 3\n"
-              "ICC seccion 2 mi 9-11 and vi 9-11 prof: Bermejo DIFICULTAD: 2\n"
+              "ICC seccion 2 mi 9-11 and vi 9-11 prof: Bernejo DIFICULTAD: 2\n"
               "ICC seccion 3 ma 17-19 and ju 17-19 prof: Melgrejo DIFICULTAD: 2\n"
               "ICC seccion 4 lu 13-15 and vi 13-15 prof: Kenneth DIFICULTAD: 1\n"
               "ICC seccion 5 lu 11-13 and vi 19-21 prof: Alvarado DIFICULTAD: 1\n"
@@ -96,11 +96,11 @@ if(curso=='I'){
         }
         if(curso=='P'){
             a="horarios disponibles sugeridos:\n"
-            "POO 1 seccion 1 mar 13-15 and vi 13-15 prof: Cuadros\n"
-            "POO 1 seccion 2 mar 7-9 and ju 9-11 prof: Bernejo\n"
-            "POO 1 seccion 3 mar 19-21 and vi 19-21 prof: Melgrejo\n"
-            "POO 1 seccion 4 lun 17-19 and vi 13-15 prof: Kenneth\n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
+              "POO 1 seccion 1 mar 13-15 and vi 13-15 prof: Cuadros DIFICULTAD: 3\n"
+              "POO 1 seccion 2 mar 7-9 and ju 9-11 prof: Bernejo DIFICULTAD: 2\n"
+              "POO 1 seccion 3 mar 19-21 and vi 19-21 prof: Melgrejo DIFICULTAD: 2\n"
+              "POO 1 seccion 4 lun 17-19 and vi 13-15 prof: Kenneth DIFICULTAD: 1\n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
         if(curso=='D'){
