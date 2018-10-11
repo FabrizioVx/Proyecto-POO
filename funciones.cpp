@@ -1520,3 +1520,84 @@ void normales(int ciclo) {
 
     }
 }
+void burros(int ciclo){
+    if(ciclo==2){
+        string horario[8][5] = {{"        Lunes         ", "         Martes       ", "      Miercoles       ", "         Jueves       ", "        Viernes       "},//dias
+                                {"                      ", "                      ", "                      ", "                      ", "                      "},//7-9
+                                {"                      ", "                      ", "                      ", "                      ", "                      "},//9-11
+                                {"L                     ", "                      ", "                      ", "                      ", "                      "},//11-13
+                                {"Matematica 2          ", "                      ", "                      ", "                      ", "                      "},//13-15
+                                {"                      ", "                      ", "Matematica 2          ", "                      ", "Matematica 2          "},//15-17
+                                {"                      ", "                      ", "                      ", "                      ", "                      "},//17-19
+                                {"                      ", "                      ", "                      ", "                      ", "                      "}};//19-21
+
+
+        imprimir(horario);
+        int resp = 1;//para entrar al loop
+        do {
+            cout << "quieres cambiar el horario propuesto?(1=si or 0=no)\n";//pregunta si deseas cambiar
+            cin >> resp;
+            if (resp == 0)break;//si tu respuesta es no se sale del loop
+            if (resp != 1) { cout << "valor incorrecto.. ingrese otra vez\n"; }
+            else {
+                cout << "que curso deseas cambiar?(escriba el curso con el nombre que se ve en el horario): \n";
+                string curso;
+                cin >> curso;//se ingresa el curso a cambiar
+                if (toupper(curso[0]) == 'M') {
+                    int cambio = 1;
+                    //comunicando los cursos disponibles
+                    do {
+                        cout << "horarios disponibles sugeridos:\n";
+                        cout << "Matematica 1 seccion 1 lu 11-13, mi 11-13 and vi 11-13 prof: Xyoby Chavez\n";
+                        cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino\n";
+                        cout << "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
+
+                        cin >> cambio;// opcion
+                        if (cambio == 0)break;
+                        if (cambio == -1) {
+                            eliminacion(curso, horario);
+                            imprimir(horario);
+                        }
+                        if (cambio == 1) {
+                            cout<<"Seccion no recomendada\n";
+                        }
+                        if (cambio == 2) {
+                            char muestra = horario[4][0][0];
+                            char muestra2 = horario[5][2][0];
+                            char muestra3 = horario[5][4][0];
+
+                            int valor = int(muestra);
+                            int valor2 = int(muestra2);
+                            int valor3 = int(muestra3);
+
+                            if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))cout << "conflicto" << endl;
+                            else {
+                                if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                    cout << "conflicto" << endl;
+                                else {
+                                    if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
+                                        horario[4][0] = "MATEMATICA 1          ";
+                                        horario[5][2] = "MATEMATICA 1          ";
+                                        horario[5][4] = "MATEMATICA 1          ";
+                                        cout << "Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+                            }
+                        }
+
+                    } while (cambio != 0);
+
+                }
+            }
+        } while (resp != 0);
+
+        imprimir(horario);
+
+    }
+
+}
+
