@@ -1422,15 +1422,15 @@ void normales(int ciclo) {
                     //comunicando los cursos disponibles
                     do {
                         cout << "horarios disponibles sugeridos:\n";
-                        cout << "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez\n";
-                        cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino\n";
+                        cout << "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez DIFICULTAD(3)\n";
+                        cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino DIFICULTAD(1)\n";
                         cout << "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
                         int acu=0;
                         while(acu<2) {
                             if(acu==1){
                                 cout << "horarios disponibles sugeridos:\n";
-                                cout << "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez\n";
-                                cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino\n";
+                                cout << "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez DIFICULTAD(3)\n";
+                                cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino DIFICULTAD(1)\n";
                                 cout << "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
                             }
 
@@ -1465,9 +1465,9 @@ void normales(int ciclo) {
                                                 cout << "conflicto" << endl;
                                             else {
                                                 eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                                horario[1][0] = "MATEMATICA 1          ";
-                                                horario[2][2] = "MATEMATICA 1          ";
-                                                horario[4][4] = "MATEMATICA 1          ";
+                                                horario[1][0] = "MATEMATICAI           ";
+                                                horario[2][2] = "MATEMATICAI           ";
+                                                horario[4][4] = "MATEMATICAI           ";
                                                 cout << "Se cambio exitosamente tu horario\n";
                                                 imprimir(horario);
                                             }
@@ -1493,9 +1493,9 @@ void normales(int ciclo) {
                                             cout << "conflicto" << endl;
                                         else {
                                             eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                            horario[4][0] = "MATEMATICA 1          ";
-                                            horario[5][2] = "MATEMATICA 1          ";
-                                            horario[5][4] = "MATEMATICA 1          ";
+                                            horario[4][0] = "MATEMATICAI           ";
+                                            horario[5][2] = "MATEMATICAI           ";
+                                            horario[5][4] = "MATEMATICAI           ";
                                             cout << "Se cambio exitosamente tu horario\n";
                                             imprimir(horario);
                                         }
@@ -1548,8 +1548,8 @@ void burros(int ciclo){
                     //comunicando los cursos disponibles
                     do {
                         cout << "horarios disponibles sugeridos:\n";
-                        cout << "Matematica 1 seccion 1 lu 11-13, mi 11-13 and vi 11-13 prof: Xyoby Chavez\n";
-                        cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino\n";
+                        cout << "Matematica 1 seccion 1 lu 11-13, mi 11-13 and vi 11-13 prof: Xyoby Chavez DIFICULTAD (3)\n";
+                        cout << "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino DIFICULTAD (1)\n";
                         cout << "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
 
                         cin >> cambio;// opcion
@@ -1579,9 +1579,9 @@ void burros(int ciclo){
                                         cout << "conflicto" << endl;
                                     else {
                                         eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                        horario[4][0] = "MATEMATICA 1          ";
-                                        horario[5][2] = "MATEMATICA 1          ";
-                                        horario[5][4] = "MATEMATICA 1          ";
+                                        horario[4][0] = "MATEMATICAI           ";
+                                        horario[5][2] = "MATEMATICAI           ";
+                                        horario[5][4] = "MATEMATICAI           ";
                                         cout << "Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
