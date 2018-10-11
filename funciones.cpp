@@ -49,12 +49,12 @@ if(curso=='I'){
         }
         if(curso=='L'){
             a="horarios disponibles sugeridos:\n"
-            "Lab com 1 seccion 1 mar 7-9 and ju 11-13 prof: Cuba\n"
-            "Lab com 1 seccion 2 mar 7-9 and ju 7-9 prof: Durand\n"
-            "Lab com 1 seccion 3 mi 17-19 and vi 13-15 prof: Hidalgo\n"
-            "Lab com 1 seccion 4 lu 15-16 and vi 9-11 prof: Ramirez\n"
-            "Lab com 1 seccion 5 ma 11-13 and mi 15-17 prof: Corzo\n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0 )\n";
+             "Lab com 1 seccion 1 mar 7-9 and ju 11-13 prof: Cuba DIFICULTAD: 2\n"
+             "Lab com 1 seccion 2 mar 7-9 and ju 7-9 prof: Durand DIFICULTAD: 3\n"
+             "Lab com 1 seccion 3 mi 17-19 and vi 13-15 prof: Hidalgo DIFICULTAD: 2\n"
+             "Lab com 1 seccion 4 lu 15-16 and vi 9-11 prof: Ramirez DIFICULTAD: 3\n"
+             "Lab com 1 seccion 5 ma 11-13 and mi 15-17 prof: Corzo DIFICULTAD: 1\n"
+             "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
         if(curso=='Q'){
