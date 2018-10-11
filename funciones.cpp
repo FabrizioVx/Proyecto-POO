@@ -59,11 +59,11 @@ if(curso=='I'){
         }
         if(curso=='Q'){
             a="horarios disponibles sugeridos:\n"
-            "Quimica General seccion 1 ma 17-19 prof: Hoyos\n"
-            "Quimica general seccion 2 lu 15-17 prof: Pinedo\n"
-            "Quimica general seccion 3 mi 15-17 prof: Hoyos\n"
-            "Quimica general seccion 4 mi 13-15 prof: Ratti\n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
+              "Quimica General seccion 1 ma 17-19 prof: Hoyos  DIFICULTAD: 2\n"
+              "Quimica general seccion 2 lu 15-17 prof: Pinedo  DIFICULTAD: 1\n"
+              "Quimica general seccion 3 mi 15-17 prof: Hoyos  DIFICULTAD: 2\n"
+              "Quimica general seccion 4 mi 13-15 prof: Ratti  DIFICULTAD: 3\n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
     }
