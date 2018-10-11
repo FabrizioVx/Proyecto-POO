@@ -22,8 +22,8 @@ string horarios( int ciclo,char curso){
         }
         if(curso=='F'){
             a="horarios disponibles sugeridos:\n "
-              "FISICA seccion 1 lu 7-9 and ju 7-9 prof: Zegarra\n "
-              "FISICA seccion 2 ma 17-19 and mi 17-19 prof: Pena\n "
+              "FISICA seccion 1 lu 7-9 and ju 7-9 prof: Zegarra DIFICULTAD: 1\n "
+              "FISICA seccion 2 ma 17-19 and mi 17-19 prof: Pena DIFICULTAD: 3\n "
               "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
