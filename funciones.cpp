@@ -13,7 +13,7 @@ using namespace std;
 string horarios( int ciclo,char curso){
     string a=" ";
     if(ciclo==1){
- if(curso=='M'){
+        if(curso=='M'){
             a="horarios disponibles sugeridos:\n"
               "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez DIFICULTAD: 3\n"
               "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino DIFICULTAD: 1\n"
@@ -27,7 +27,7 @@ string horarios( int ciclo,char curso){
               "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
-if(curso=='I'){
+        if(curso=='I'){
             a="horarios disponibles sugeridos:\n"
               "ICC seccion 1 ma 7-9 and mi 15-17 prof: Cuadros DIFICULTAD: 3\n"
               "ICC seccion 2 mi 9-11 and vi 9-11 prof: Bernejo DIFICULTAD: 2\n"
@@ -49,12 +49,12 @@ if(curso=='I'){
         }
         if(curso=='L'){
             a="horarios disponibles sugeridos:\n"
-             "Lab com 1 seccion 1 mar 7-9 and ju 11-13 prof: Cuba DIFICULTAD: 2\n"
-             "Lab com 1 seccion 2 mar 7-9 and ju 7-9 prof: Durand DIFICULTAD: 3\n"
-             "Lab com 1 seccion 3 mi 17-19 and vi 13-15 prof: Hidalgo DIFICULTAD: 2\n"
-             "Lab com 1 seccion 4 lu 15-16 and vi 9-11 prof: Ramirez DIFICULTAD: 3\n"
-             "Lab com 1 seccion 5 ma 11-13 and mi 15-17 prof: Corzo DIFICULTAD: 1\n"
-             "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0 )\n";
+              "Lab com 1 seccion 1 mar 7-9 and ju 11-13 prof: Cuba DIFICULTAD: 2\n"
+              "Lab com 1 seccion 2 mar 7-9 and ju 7-9 prof: Durand DIFICULTAD: 3\n"
+              "Lab com 1 seccion 3 mi 17-19 and vi 13-15 prof: Hidalgo DIFICULTAD: 2\n"
+              "Lab com 1 seccion 4 lu 15-16 and vi 9-11 prof: Ramirez DIFICULTAD: 3\n"
+              "Lab com 1 seccion 5 ma 11-13 and mi 15-17 prof: Corzo DIFICULTAD: 1\n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
         if(curso=='Q'){
@@ -105,16 +105,16 @@ if(curso=='I'){
         }
         if(curso=='D'){
             a="horarios disponibles sugeridos:\n"
-            "Desarrollo de empresas seccion 1 lun 7-9 prof:Guevara \n"
-            "Desarrollo de empresas seccion 2 vi 9-11 prof:Zorrilla \n"
-            "Desarrollo de empresas seccion 3 mi 11-13 prof:Camacho \n"
-            "Desarrollo de empresas seccion 4 ma 17-19 prof:Guevara \n"
-            "Desarrollo de empresas seccion 5 ma 19-21 prof:Guevara \n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
+              "Desarrollo de empresas seccion 1 lun 7-9 prof:Guevara \n"
+              "Desarrollo de empresas seccion 2 vi 9-11 prof:Zorrilla \n"
+              "Desarrollo de empresas seccion 3 mi 11-13 prof:Camacho \n"
+              "Desarrollo de empresas seccion 4 ma 17-19 prof:Guevara \n"
+              "Desarrollo de empresas seccion 5 ma 19-21 prof:Guevara \n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
             return a;
 
         }
-      if(curso=='E'){
+        if(curso=='E'){
             a="horarios disponibles sugeridos:\n"
               "Estructuras discretas II seccion 1 lun 13-15, Miercoles 13-15, Jueves 07-09 profesor: Jose Miguel Renom: DIFICULTAD: 3 \n"
               "Estructuras discretas II seccion 2 lun 11-13, Martes 17-19, Viernes 9-11 prof: Yamilet Serrano DIFICULTAD: 2 \n"
@@ -123,11 +123,11 @@ if(curso=='I'){
         }
         if(curso=='A'){
             a= "horarios disponibles sugeridos:\n"
-            "Arte y tecnologia seccion 1 lun 9-11 prof:Pasquel \n"
-            "Arte y tecnologia seccion 2 lun 9-11 prof:Camacho \n"
-            "Arte y tecnologia seccion 3 vi 11-13 prof: Hurtado \n"
-            "Arte y tecnologia seccion 4 ju 9-11 prof: Gisbert\n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 o incorrecto)\n";
+               "Arte y tecnologia seccion 1 lun 9-11 prof:Pasquel \n"
+               "Arte y tecnologia seccion 2 lun 9-11 prof:Camacho \n"
+               "Arte y tecnologia seccion 3 vi 11-13 prof: Hurtado \n"
+               "Arte y tecnologia seccion 4 ju 9-11 prof: Gisbert\n"
+               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 o incorrecto)\n";
             return a;
 
         }
@@ -423,8 +423,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[1][0]="fisica                ";
-                                    horario[1][3]="fisica                ";
+                                    horario[1][0]="Fisica-1              ";
+                                    horario[1][3]="Fisica-1              ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -440,8 +440,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[6][1]="fisica                ";
-                                    horario[6][3]="fisica                ";
+                                    horario[6][1]="Fisica-1              ";
+                                    horario[6][3]="Fisica-1              ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -525,7 +525,7 @@ void alto(int ciclo){
                         if(cambio==1){
                             char muestra = horario[6][1][0];
                             int valor = int(muestra);
-                            
+
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else {
                                 eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
@@ -590,7 +590,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else {
                                 eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                horario[6][0] = "Desafios-G.           ";
+                                horario[6][0] = "Desafios-Globales     ";
                                 cout << "Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -603,7 +603,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[3][2]="Desafios-G.           ";
+                                horario[3][2]="Desafios-Globales     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -615,7 +615,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[4][2]="Desafios-G.           ";
+                                horario[4][2]="Desafios-Globales     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -627,7 +627,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[2][4]="Desafios-G.           ";
+                                horario[2][4]="Desafios-Globales     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -656,8 +656,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[1][1]="Icc  ";
-                                    horario[5][2]="Icc  ";
+                                    horario[1][1]="Icc                   ";
+                                    horario[5][2]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -676,8 +676,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[2][2]="Icc  ";
-                                    horario[2][4]="Icc  ";
+                                    horario[2][2]="Icc                   ";
+                                    horario[2][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -695,8 +695,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[6][1]="Icc  ";
-                                    horario[6][3]="Icc  ";
+                                    horario[6][1]="Icc                   ";
+                                    horario[6][3]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -712,8 +712,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[4][0]="Icc  ";
-                                    horario[4][4]="Icc  ";
+                                    horario[4][0]="Icc                   ";
+                                    horario[4][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -729,8 +729,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[2][2]="Icc  ";
-                                    horario[2][4]="Icc  ";
+                                    horario[2][2]="Icc                   ";
+                                    horario[2][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -746,8 +746,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[2][2]="Icc  ";
-                                    horario[2][4]="Icc  ";
+                                    horario[2][2]="Icc                   ";
+                                    horario[2][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -865,7 +865,7 @@ void alto(int ciclo){
         // Lu--Ma--Mi--Ju--Vi
         string horario[8][5]={{"        Lunes         ","         Martes       ","      Miercoles       ","         Jueves       ","        Viernes       "},//dias
                               {"E. Discrestas-2       ","LabCom-2              ","                      ","                      ","                      "},//7-9
-                              {"Arte&tecnologia     ","Fisica-2              ","E. Discrestas-2       ","E. Discrestas-2       ","Fisica-2              "},//9-11
+                              {"Arte&tecnologia       ","Fisica-2              ","E. Discrestas-2       ","E. Discrestas-2       ","Fisica-2              "},//9-11
                               {"Matematica 2          ","                      ","Matematica-2          ","                      ","Matematica-2          "},//11-13
                               {"                      ","POO                   ","                      ","LabCom-2              ","POO                   "},//13-15
                               {"Desarrollo-de-empresas","                      ","Desarrollo-de-empresas","Desarrollo-de-empresas","                      "},//15-17
