@@ -118,7 +118,6 @@ string horarios( int ciclo,char curso){
             a="horarios disponibles sugeridos:\n"
               "Estructuras discretas II seccion 1 lun 13-15, Miercoles 13-15, Jueves 07-09 profesor: Jose Miguel Renom: DIFICULTAD: 3 \n"
               "Estructuras discretas II seccion 2 lun 11-13, Martes 17-19, Viernes 9-11 prof: Yamilet Serrano DIFICULTAD: 2 \n"
-              "Estructuras discretas II seccion 3 lun 11-13, Martes 17-19, Viernes 9-11 prof: Yamilet Serrano DIFICULTAD: 2 \n"
               "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 o niguno= 0 )\n";
             return a;
         }
@@ -152,6 +151,25 @@ void imprimir(string horario[8][5]){
 
         cout<<endl;
     }
+}
+void leerarch(string a[8][5]){
+    ofstream archivo;
+    archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/hola.txt",ios::out);
+    for (int i=0;i<8;i++) {
+        if(i==0){archivo<<"Dias: ";}
+        if(i==1){archivo<<"07-09 ";}
+        if(i==2){archivo<<"09-11 ";}
+        if(i==3){archivo<<"11-13 ";}
+        if(i==4){archivo<<"13-15 ";}
+        if(i==5){archivo<<"15-17 ";}
+        if(i==6){archivo<<"17-19 ";}
+        if(i==7){archivo<<"19-21 ";}
+        for (int j = 0; j < 5; j++) {
+            archivo <<setw(5)<<"|"<< a[i][j] << "|"; // behaves like cout - cout is also a stream
+        }
+        archivo << "\n";
+    }
+    archivo.close();
 }
 int test() {
     char respuesta;
@@ -359,7 +377,7 @@ int test() {
     return punt;
 }
 int inden(){
-    string num="0";
+    string num;
 
     while(true){
         cin>>num;
@@ -424,8 +442,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[1][0]="fisica                ";
-                                    horario[1][3]="fisica                ";
+                                    horario[1][0]="Fisica-1              ";
+                                    horario[1][3]="Fisica-1              ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -441,8 +459,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[6][1]="fisica                ";
-                                    horario[6][3]="fisica                ";
+                                    horario[6][1]="Fisica-1              ";
+                                    horario[6][3]="Fisica-1              ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -591,7 +609,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else {
                                 eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                horario[6][0] = "Desafios-G.           ";
+                                horario[6][0] = "Desafios-Globales     ";
                                 cout << "Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -604,7 +622,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[3][2]="Desafios-G.           ";
+                                horario[3][2]="Desafios-Globales     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -616,7 +634,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[4][2]="Desafios-G.           ";
+                                horario[4][2]="Desafios-Globales     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -628,7 +646,7 @@ void alto(int ciclo){
                             if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                             else{
                                 eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[2][4]="Desafios-G.           ";
+                                horario[2][4]="Desafios-Globales     ";
                                 cout<<"Se cambio exitosamente tu horario\n";
                                 imprimir(horario);
                             }
@@ -657,8 +675,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[1][1]="Icc  ";
-                                    horario[5][2]="Icc  ";
+                                    horario[1][1]="Icc                   ";
+                                    horario[5][2]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -677,8 +695,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[2][2]="Icc  ";
-                                    horario[2][4]="Icc  ";
+                                    horario[2][2]="Icc                   ";
+                                    horario[2][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -696,8 +714,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[6][1]="Icc  ";
-                                    horario[6][3]="Icc  ";
+                                    horario[6][1]="Icc                   ";
+                                    horario[6][3]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -713,8 +731,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[4][0]="Icc  ";
-                                    horario[4][4]="Icc  ";
+                                    horario[4][0]="Icc                   ";
+                                    horario[4][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -730,8 +748,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[2][2]="Icc  ";
-                                    horario[2][4]="Icc  ";
+                                    horario[2][2]="Icc                   ";
+                                    horario[2][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -747,8 +765,8 @@ void alto(int ciclo){
                                 if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);
-                                    horario[2][2]="Icc  ";
-                                    horario[2][4]="Icc  ";
+                                    horario[2][2]="Icc                   ";
+                                    horario[2][4]="Icc                   ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
@@ -861,6 +879,7 @@ void alto(int ciclo){
         }while(resp!=0);
 
         imprimir(horario);
+        leerarch(horario);
     }
     if (ciclo==2){
         // Lu--Ma--Mi--Ju--Vi
@@ -1491,8 +1510,8 @@ void alto(int ciclo){
 
 
         imprimir(horario);
+        leerarch(horario);
     }
-
 }
 void normales(int ciclo) {
     if (ciclo == 2) {
@@ -1608,6 +1627,7 @@ void normales(int ciclo) {
         } while (resp != 0);
 
         imprimir(horario);
+        leerarch(horario);
 
     }
 }
@@ -1684,8 +1704,8 @@ void burros(int ciclo){
         } while (resp != 0);
 
         imprimir(horario);
+        leerarch(horario);
 
     }
 
 }
-
