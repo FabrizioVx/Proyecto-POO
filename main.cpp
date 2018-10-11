@@ -2,6 +2,9 @@
 #include <fstream>
 #include <string>
 #include "funciones.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <iomanip>
 using namespace std;
 int main() {
     cout<<"HORARIO\n";
