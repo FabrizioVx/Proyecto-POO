@@ -263,7 +263,7 @@ void eliminacion(string curso, string matriz[8][5]){
 void alto(int ciclo){
     if(ciclo==1){
         string horario[8][5]={{"        LUNES         ","        MARTES        ","       MIERCOLES      ","       JUEVES         ","        VIERNES       "},//dias
-                              {"                      ","                      ","                      ","                      ","                      "},//7-9
+                              {"fisica                ","                      ","                      ","fisica                ","                      "},//7-9
                               {"                      ","                      ","MatematicaI           ","                      ","                      "},//9-11
                               {"MatematicaI           ","LabComI               ","                      ","                      ","                      "},//11-13
                               {"                      ","                      ","Desafios G.           ","                      ","MatematicaI           "},//13-15
