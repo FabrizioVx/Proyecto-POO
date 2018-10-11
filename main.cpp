@@ -17,13 +17,9 @@ int main() {
     //cout<<"PUNTAJE TOTAL = "<<puntos<<endl;
 
     int ciclo;
-
     do{
-        cout<<"Solo contamos con los horarios del 1 y 2 ciclo...\n";
-        cout<<"ingrese ciclo: ";
-        cin>>ciclo;
-    }
-    while(2<ciclo || ciclo<1); //solo hasta quinto ciclo
+        ciclo=inden();}while(2<ciclo || ciclo<1);
+    //solo hasta 1 y 2 ciclo
 
 //imprimiendo horario
     alto(ciclo);
