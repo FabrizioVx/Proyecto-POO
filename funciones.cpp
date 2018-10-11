@@ -70,18 +70,18 @@ if(curso=='I'){
     if(ciclo==2){
         if(curso=='F'){
             a="horarios disponibles sugeridos:\n"
-            "fisica 2 seccion 1 mar 7-9 and vi 7-9 prof: Sergio Pena\n"
-            "fisica 2 seccion 2 mar 9-11 and vi 9-11 prof: Katia Zegarra\n"
-            "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 niguno= 0 )\n";
+              "fisica 2 seccion 1 mar 7-9 and vi 7-9 prof: Sergio Pena DIFICULTAD: 3\n"
+              "fisica 2 seccion 2 mar 9-11 and vi 9-11 prof: Katia Zegarra DIFICULTAD: 1\n"
+              "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 niguno= 0 )\n";
             return a;
 
         }
         if(curso=='M'){
             a="horarios disponibles:\n"
-            "matematica 2 seccion 1 lun mi vi 7-9 prof: Xyobi Chavez\n"
-            "matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino\n"
-            "matematica 2 seccion 3 lun mi vi 11-13 prof: Xyobi Chavez\n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
+              "matematica 2 seccion 1 lun mi vi 7-9 prof: Xyobi Chavez DIFICULTAD: 3\n"
+              "matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino DIFICULTAD: 1\n"
+              "matematica 2 seccion 3 lun mi vi 11-13 prof: Xyobi Chavez DIFICULTAD: 3\n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
         if(curso=='L'){
