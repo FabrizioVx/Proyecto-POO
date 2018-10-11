@@ -18,6 +18,8 @@ int main() {
 
     int ciclo;
     do{
+        cout<<"Solo contamos con los horarios del 1 y 2 ciclo...\n";
+        cout<<"ingrese ciclo: ";
         ciclo=inden();}while(2<ciclo || ciclo<1);
     //solo hasta 1 y 2 ciclo
 
