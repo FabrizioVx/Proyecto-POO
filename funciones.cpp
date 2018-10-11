@@ -86,12 +86,12 @@ if(curso=='I'){
         }
         if(curso=='L'){
             a= "horarios disponibles:\n"
-            "Labcom 2 seccion 1 lun 7-9 vi 7-9 Prof: Carlo Guevara\n"
-            "labcom 2 seccion 2 mar 9-11 ju 9-11 Prof: \n"
-            "labcom 2 seccion 3 mi  11-13 vi 11-13 Prof:\n"
-            "labcom 2 seccion 4 ju 11-13 vi 11-13 Prof:\n"
-            "labcom 2 seccion 5 ma 7-9 ju 13-15 Prof:\n"
-            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
+               "Labcom 2 seccion 1 lun 7-9 vi 7-9 Prof: Carlo Guevara DIFICULTAD: 1\n"
+               "labcom 2 seccion 2 mar 9-11 ju 9-11 Prof: juliana carrillo DIFICULTAD: 2\n"
+               "labcom 2 seccion 3 mi  11-13 vi 11-13 Prof:Teresa torres DIFICULTAD: 3\n"
+               "labcom 2 seccion 4 ju 11-13 vi 11-13 Prof:Oscar Hidalgo DIFICULTAD: 2\n"
+               "labcom 2 seccion 5 ma 7-9 ju 13-15 Prof:Oriana Vidal DIFICULTAD: 2\n"
+               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
             return a;
         }
         if(curso=='P'){
