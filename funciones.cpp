@@ -13,11 +13,11 @@ using namespace std;
 string horarios( int ciclo,char curso){
     string a=" ";
     if(ciclo==1){
-        if(curso=='M'){
+ if(curso=='M'){
             a="horarios disponibles sugeridos:\n"
-            "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez\n"
-            "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Xyoby Chavez\n"
-            "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
+              "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez DIFICULTAD: 3\n"
+              "Matematica 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Palomino DIFICULTAD: 1\n"
+              "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
         if(curso=='F'){
