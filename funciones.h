@@ -15,6 +15,7 @@ void alto(int ciclo);
 void imprimir(string horario[8][5]);
 int inden();//Verificador de los numeros
 string horarios( int ciclo,char curso);
+int verif(string a,char answer);
 
 
 #endif //PROYECTO_1_FUNCIONES_H
