@@ -79,8 +79,8 @@ string horarios( int ciclo,char curso){
         if(curso=='M'){
             a="horarios disponibles:\n"
               "matematica 2 seccion 1 lun mi vi 7-9 prof: Xyobi Chavez DIFICULTAD: 3\n"
-              "matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino DIFICULTAD: 2\n"
-              "matematica 2 seccion 3 lun mi vi 11-13 prof: Miguel Palomino DIFICULTAD: 2\n"
+              "matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino DIFICULTAD: 1\n"
+              "matematica 2 seccion 3 lun mi vi 11-13 prof: Naudy Lopez DIFICULTAD: 2\n"
               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
