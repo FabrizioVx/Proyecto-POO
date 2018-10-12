@@ -186,7 +186,7 @@ int test() {
             case 1:
                 cout << "test de CI" << endl;
 
-                cout << "1.- ¿Que numero hace falta en esta secuencia?\n"
+                cout << "1.- Que numero hace falta en esta secuencia?\n"
                         "4 9 16 25 [?] 64" << endl;
                 cout << "a) 50" << endl;
                 cout << "b) 49" << endl;
@@ -231,7 +231,7 @@ int test() {
             case 3:
                 cout << "test de CI" << endl;
 
-                cout << "¿Cuál letra debe ser la siguiente en esta secuencia? L K J H [?]" << endl;
+                cout << "Cual letra debe ser la siguiente en esta secuencia? L K J H [?]" << endl;
                 cout << "a) M" << endl;
                 cout << "b) O" << endl;
                 cout << "c) P" << endl;
@@ -273,7 +273,7 @@ int test() {
             case 5:
                 cout << "test de CI" << endl;
 
-                cout << "Dos personas caminan 4 metros desde el mismo \n punto en dirección opuesta, luego giran a la izquierda y caminan 3 metros. ¿A qué distancia se encuentran?" << endl;
+                cout << "Dos personas caminan 4 metros desde el mismo \n punto en dirección opuesta, luego giran a la izquierda y caminan 3 metros. A qué distancia se encuentran?" << endl;
                 cout << "a) 8" << endl;
                 cout << "b) 10" << endl;
                 cout << "c) 15" << endl;
@@ -316,8 +316,8 @@ int test() {
             case 7:
                 cout << "test de CI" << endl;
 
-                cout << "Tomás, Pedro, Jaime, Susana y Julia realizaron el test.\n Julia obtuvo mayor puntuación que Tomás, Jaime puntuó más bajo que Pedro pero más alto que Susana, \n y Pedro logró menos puntos que Tomás. ¿Quién obtuvo la puntuación más alta?" << endl;
-                cout << "a) Tomás" << endl;
+                cout << "Tomas, Pedro, Jaime, Susana y Julia realizaron el test.\n Julia obtuvo mayor puntuación que Tomás, Jaime puntuó más bajo que Pedro pero más alto que Susana, \n y Pedro logró menos puntos que Tomás. ¿Quién obtuvo la puntuación más alta?" << endl;
+                cout << "a) Tomas" << endl;
                 cout << "b) Jaime" << endl;
                 cout << "c) Susana" << endl;
                 cout << "d) Julia" << endl;
@@ -337,7 +337,7 @@ int test() {
             case 8:
                 cout << "test de CI" << endl;
 
-                cout << "¿Qué palabra no pertenece al siguiente grupo?" << endl;
+                cout << "Qué palabra no pertenece al siguiente grupo?" << endl;
                 cout << "a) sonrisa" << endl;
                 cout << "b) pluma" << endl;
                 cout << "c) hermoso" << endl;
@@ -358,7 +358,7 @@ int test() {
             case 9:
                 cout << "test de CI" << endl;
 
-                cout << "¿Qué palabra no pertenece al siguiente grupo?" << endl;
+                cout << "Que palabra no pertenece al siguiente grupo?" << endl;
                 cout << "a) sonrisa" << endl;
                 cout << "b) pluma" << endl;
                 cout << "c) hermoso" << endl;
