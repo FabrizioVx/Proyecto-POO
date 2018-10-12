@@ -16,7 +16,7 @@ string horarios( int ciclo,char curso){
         if(curso=='E'){
             a="horarios disponibles sugeridos:\n"
               "E.discretas 1 1 seccion 1 lu 9-11, ju 7-9 and vi 11-13 prof: Jose Miguel Renom DIFICULTAD: 3\n"
-              "E.discretas 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Yamilet serrano DIFICULTAD: 2\n"
+              "E.discretas 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Yamilet serrano DIFICULTAD: 1\n"
               "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
