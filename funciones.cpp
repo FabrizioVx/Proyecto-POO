@@ -161,7 +161,7 @@ void imprimir(string horario[8][5]){
 }
 void leerarch(string a[8][5]){
     ofstream archivo;
-    archivo.open("/Users/markopuchuri/Desktop/POO1/proyecto-1/horario.txt",ios::out);
+    archivo.open("/Users/markopuchuri/Desktop/horario.txt",ios::out);
     for (int i=0;i<8;i++) {
         if(i==0){archivo<<"Dias: ";}
         if(i==1){archivo<<"07-09 ";}
