@@ -1517,19 +1517,15 @@ void alto(int ciclo){
 void normales(int ciclo) {
     if (ciclo == 2) {
         string horario[8][5] = {{"        Lunes         ", "         Martes       ", "      Miercoles       ", "         Jueves       ", "        Viernes       "},//dias
-                                {"                      ", "                      ", "                      ", "                      ", "                      "},//7-9
-                                {"                      ", "                      ", "                      ", "                      ", "                      "},//9-11
-                                {"L                     ", "                      ", "                      ", "                      ", "                      "},//11-13
-                                {"Matematica-2          ", "                      ", "                      ", "                      ", "                      "},//13-15
-                                {"                      ", "                      ", "Matematica-2          ", "                      ", "Matematica-2          "},//15-17
+                                {"Desarrollo-de-empresas", "LabCom-2              ", "                      ", "E. Discrestas-2       ", "                      "},//7-9
+                                {"                      ", "Fisica-2              ", "                      ", "                      ", "Fisica-2              "},//9-11
+                                {"Matematica-2          ", "                      ", "Matematica-2          ", "                      ", "Matematica-2          "},//11-13
+                                {"E. Discrestas-2       ", "                      ", "E. Discrestas-2       ", "LabCom-2              ", "                      "},//13-15
+                                {"                      ", "                      ", "                      ", "                      ", "                      "},//15-17
                                 {"                      ", "                      ", "                      ", "                      ", "                      "},//17-19
-                                {"                      ", "                      ", "                      ", "                      ", "                      "}};//19-21
+                                {"                      ", "POO                   ", "                      ", "                      ", "POO                   "}};//19-21
 
 
-        imprimir(horario);
-        int resp;//para entrar al loop
-        do {
-            cout << "quieres cambiar el horario propuesto?(1=si or 0=no)\n";//pregunta si deseas cambiar
             resp=inden();
             if (resp == 0)break;//si tu respuesta es no se sale del loop
             if (resp != 1) { cout << "valor incorrecto.. ingrese otra vez\n"; }
