@@ -404,9 +404,9 @@ void eliminacion(string curso, string matriz[8][5]){
 void alto(int ciclo){
     if(ciclo==1){
         string horario[8][5]={{"        LUNES         ","        MARTES        ","       MIERCOLES      ","       JUEVES         ","        VIERNES       "},//dias
-                              {"Fisica-1              ","                      ","Fisica-1              ","                      ","                      "},//7-9
-                              {"                      ","                      ","Matematica-1          ","                      ","                      "},//9-11
-                              {"Matematica-1          ","LabCom-1              ","                      ","                      ","                      "},//11-13
+                              {"Fisica-1              ","                      ","Fisica-1              ","E.Discretas-1         ","                      "},//7-9
+                              {"E.discretas-1         ","                      ","Matematica-1          ","                      ","                      "},//9-11
+                              {"Matematica-1          ","LabCom-1              ","                      ","                      ","E.Discretas-1         "},//11-13
                               {"                      ","                      ","Desafios-Globales     ","                      ","Matematica-1          "},//13-15
                               {"Quimica               ","Icc                   ","LabCom-1              ","                      ","Icc                   "},//15-17
                               {"                      ","                      ","                      ","                      ","                      "},//17-19
@@ -467,8 +467,53 @@ void alto(int ciclo){
                             }
                         }
                     }while(cambio!=0);
-
                 }
+                if (toupper(curso[0])=='E'){
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do{
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        cambio=inden();// opcion
+                        if(cambio==0)break;
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
+                        if(cambio==1){
+                            char muestra = horario[1][0][0];
+                            char muestra2=horario[1][2][0];
+                            int valor = int(muestra);
+                            int valor2=int(muestra2);
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    eliminacion(curso,horario);
+                                    horario[1][0]="E.Discretas-1         ";
+                                    horario[1][2]="E-Discretas-1         ";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
+                                }
+                            }
+                        }
+                        if(cambio==2){
+                            char muestra = horario[6][1][0];
+                            char muestra2=horario[6][2][0];
+                            int valor = int(muestra);
+                            int valor2=int(muestra2);
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    eliminacion(curso,horario);
+                                    horario[6][1]="E.Discretas-1          ";
+                                    horario[6][2]="E.Discretas-1          ";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
+                                }
+                            }
+                        }
+                    }while(cambio!=0);
+                }
+
+
                 //Mate 1
                 if (toupper(curso[0])=='M'){
                     int cambio;
