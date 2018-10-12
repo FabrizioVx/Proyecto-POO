@@ -86,8 +86,8 @@ string horarios( int ciclo,char curso){
         if(curso=='M'){
             a="horarios disponibles:\n"
               "matematica 2 seccion 1 lun mi vi 7-9 prof: Xyobi Chavez DIFICULTAD: 3\n"
-              "matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino DIFICULTAD: 2\n"
-              "matematica 2 seccion 3 lun mi vi 11-13 prof: Miguel Palomino DIFICULTAD: 2\n"
+              "matematica 2 seccion 2 lun mi vi 9-11 prof: Miguel Palomino DIFICULTAD: 1\n"
+              "matematica 2 seccion 3 lun mi vi 11-13 prof: Naudy Lopez DIFICULTAD: 2\n"
               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
@@ -141,6 +141,22 @@ string horarios( int ciclo,char curso){
     }
     return a;
 }
+int verif(string a,char answer){
+    if(a.length()<2){
+        if (toupper(a[0])<65 || toupper(a[0])>68 ) {
+            return -1;
+        } else {
+            if (toupper(a[0])== answer) {
+                return 1;
+            }
+            return 0;
+        }
+    }
+    else {
+        return -1;
+    }
+
+}
 void imprimir(string horario[8][5]){
     for(int i=0;i<8;i++){
         if(i==0){cout<<"Dias: ";}
@@ -179,8 +195,9 @@ void leerarch(string a[8][5]){
     archivo.close();
 }
 int test() {
-    char respuesta;
+    string respuesta;
     int punt=0;
+    int ver;
     for (int i = 0; i < 10; i++) {
         switch (i) {
             case 1:
@@ -192,20 +209,24 @@ int test() {
                 cout << "b) 49" << endl;
                 cout << "c) 30" << endl;
                 cout << "d) 59" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'A');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'a'||respuesta == 'A') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
-
 
             case 2:
                 cout << "test de CI" << endl;
@@ -215,18 +236,23 @@ int test() {
                 cout << "b) 15" << endl;
                 cout << "c) 12" << endl;
                 cout << "d) 50" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'B');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'b' ||respuesta == 'B' ) {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
             case 3:
                 cout << "test de CI" << endl;
@@ -236,18 +262,23 @@ int test() {
                 cout << "b) O" << endl;
                 cout << "c) P" << endl;
                 cout << "d) G" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'B');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'b' ||respuesta == 'B') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
             case 4:
                 cout << "test de CI" << endl;
@@ -257,18 +288,23 @@ int test() {
                 cout << "b) PLATANO" << endl;
                 cout << "c) FRESA" << endl;
                 cout << "d) LECHUGA" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'A');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'a' ||respuesta == 'A') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
             case 5:
                 cout << "test de CI" << endl;
@@ -278,19 +314,23 @@ int test() {
                 cout << "b) 10" << endl;
                 cout << "c) 15" << endl;
                 cout << "d) 5" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'B');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'b' ||respuesta == 'B') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
-
+                }while(ver== -1);
                 break;
             case 6:
                 cout << "test de CI" << endl;
@@ -300,18 +340,23 @@ int test() {
                 cout << "b) Letras" << endl;
                 cout << "c) Papel" << endl;
                 cout << "d) Hoja" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'C');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'c' ||respuesta == 'C') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
             case 7:
                 cout << "test de CI" << endl;
@@ -321,18 +366,23 @@ int test() {
                 cout << "b) Jaime" << endl;
                 cout << "c) Susana" << endl;
                 cout << "d) Julia" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'C');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'c' ||respuesta == 'C') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
             case 8:
                 cout << "test de CI" << endl;
@@ -342,18 +392,23 @@ int test() {
                 cout << "b) pluma" << endl;
                 cout << "c) hermoso" << endl;
                 cout << "d) pensamiento" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'C');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'c' ||respuesta == 'C') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
             case 9:
                 cout << "test de CI" << endl;
@@ -363,18 +418,23 @@ int test() {
                 cout << "b) pluma" << endl;
                 cout << "c) hermoso" << endl;
                 cout << "d) pensamiento" << endl;
-                cin >> respuesta;
+                do{
+                    cout<<"Ingresar respuesta\n";
+                    cin >> respuesta;
+                    ver=verif(respuesta,'C');
+                    if(ver==-1){
+                        cout<<"Valor incorrecto..ingrese otra vez\n";
+                    }
+                    else{
+                        if(ver==0){
+                            cout<<"respuesta incorrecta\n";
+                        }
+                        if(ver==1){
+                            punt=punt+10;
+                        }
+                    }
 
-                if (respuesta == 'c' ||respuesta == 'C') {
-                    cout<<"//escribe solo una letra. Se tomara en cuenta el primer digito\n";
-                    cout << "la respuesta es correcta" << endl;
-                    punt= punt+10;
-
-                }
-
-                else {
-                    cout << "La respuesta es incorrecta" << endl;
-                }
+                }while(ver== -1);
                 break;
         }
 
@@ -1628,7 +1688,7 @@ void normal(int ciclo) {
                             }
                             if (cambio == 1) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -1719,7 +1779,7 @@ void normal(int ciclo) {
                             }
                             if (cambio == 1) {
                                 if (acu == 0) {
-                                    cout << "curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 } else {
                                     char muestra = horario[3][0][0];
@@ -1825,7 +1885,7 @@ void normal(int ciclo) {
                             }
                             if (cambio == 2) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -1914,7 +1974,7 @@ void normal(int ciclo) {
                             }
                             if(cambio==4){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
 
@@ -2019,7 +2079,7 @@ void normal(int ciclo) {
                             }
                             if (cambio == 1) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2176,7 +2236,7 @@ void normal(int ciclo) {
                             }
                             if(cambio==2){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2217,7 +2277,7 @@ void normal(int ciclo) {
                             }
                             if(cambio==4){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2431,7 +2491,7 @@ void normal(int ciclo) {
 
                             if (cambio == 1) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2544,7 +2604,7 @@ void normal(int ciclo) {
 
                             if (cambio == 3) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2640,7 +2700,7 @@ void normal(int ciclo) {
 
                             if (cambio == 1) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2838,7 +2898,7 @@ void normal(int ciclo) {
 
                             if (cambio == 1) {
                                 if (acu == 0) {
-                                    cout << "curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 } else {
                                     char muestra = horario[1][0][0];
@@ -3018,11 +3078,11 @@ void bajo(int ciclo) {   //CICLO1
                                 imprimir(horario);
                             }
                             if (cambio == 1) {
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 2) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3084,7 +3144,7 @@ void bajo(int ciclo) {   //CICLO1
                                 imprimir(horario);
                             }
                             if (cambio == 1) {
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 2) {
                                 char muestra = horario[4][0][0];
@@ -3159,7 +3219,7 @@ void bajo(int ciclo) {   //CICLO1
 
                             }
                             if (cambio == 2) {
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
 
                             }
 
@@ -3192,7 +3252,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
                             if(cambio==1){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3222,7 +3282,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
                             if(cambio==3){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3240,7 +3300,7 @@ void bajo(int ciclo) {   //CICLO1
 
                             }
                             if(cambio==4){
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                         }
 
@@ -3331,13 +3391,13 @@ void bajo(int ciclo) {   //CICLO1
                                 imprimir(horario);
                             }
                             if (cambio == 1) {
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
 
                             }
                             if(cambio==2){
 
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3360,7 +3420,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
                             if(cambio==3){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3418,7 +3478,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
                             if(cambio==6){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3470,7 +3530,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
                             if(cambio==1){
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3493,11 +3553,11 @@ void bajo(int ciclo) {   //CICLO1
 
                             }
                             if(cambio==2){
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 3) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3521,7 +3581,7 @@ void bajo(int ciclo) {   //CICLO1
 
                             }
                             if(cambio==4){
-                                cout<<"seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if(cambio==5){
                                 char muestra = horario[3][1][0];
@@ -3598,7 +3658,7 @@ void bajo(int ciclo) {   //CICLO1
                                 imprimir(horario);
                             }
                             if (cambio == 1) {
-                                cout << "Seccion no recomendada\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 2) {
                                 char muestra = horario[2][0][0];
@@ -3630,7 +3690,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
                             if (cambio == 3) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3688,7 +3748,7 @@ void bajo(int ciclo) {   //CICLO1
                             }
 
                             if (cambio == 1) {
-                                cout << "Seccion no recomendada\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 2) {
                                 char muestra = horario[2][1][0];
@@ -3760,7 +3820,7 @@ void bajo(int ciclo) {   //CICLO1
                             if (cambio == 2) {//primero se verifica si hace conflicto en tu horario
 
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3785,12 +3845,12 @@ void bajo(int ciclo) {   //CICLO1
                             }
 
                             if (cambio == 3) {
-                                cout << "Seccion no recomendada\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 4) {//primero se verifica si hace conflicto en tu horario
 
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3818,7 +3878,7 @@ void bajo(int ciclo) {   //CICLO1
                             if (cambio == 5) {//primero se verifica si hace conflicto en tu horario
 
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3869,12 +3929,12 @@ void bajo(int ciclo) {   //CICLO1
                             }
 
                             if (cambio == 1) {
-                                cout<<"Seccion recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if(cambio==2){//primero se verifica si hace conflicto en tu horario
 
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -3899,7 +3959,7 @@ void bajo(int ciclo) {   //CICLO1
                             if(cambio==3){//primero se verifica si hace conflicto en tu horario
 
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -4059,11 +4119,11 @@ void bajo(int ciclo) {   //CICLO1
                             }
 
                             if (cambio == 1) {
-                                cout<<"Seccion no recomendado\n";
+                                cout<<"seccion con demasiada dificultad para su nivel de IQ\n";
                             }
                             if (cambio == 2) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
