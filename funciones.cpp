@@ -1514,6 +1514,49 @@ void alto(int ciclo){
     }
 }
 void normal(int ciclo) {
+    if(ciclo==1){
+        string horario[8][5];
+        imprimir(horario);
+        int resp;
+        do{
+            cout << "quieres cambiar el horario propuesto?(1=si or 0=no)\n";//pregunta si deseas cambiar
+            resp=inden();
+            if (resp == 0)break;//si tu respuesta es no se sale del loop
+            if (resp != 1) { cout << "valor incorrecto.. ingrese otra vez\n"; }
+            else{
+                cout << "que curso deseas cambiar?(escriba el curso con el nombre que se ve en el horario): \n";
+                string curso;
+                cin >> curso;
+                //MATEMATICA 1
+                if (toupper(curso[0]) == 'M'){
+
+                }
+                //FISICA 1
+                if (toupper(curso[0]) == 'F'){
+
+                }
+                //QUIMICA
+                if (toupper(curso[0]) == 'Q'){
+
+                }
+                //DESAFIOS GLOBALES
+                if (toupper(curso[0]) == 'D'){
+
+                }
+                //ICC
+                if (toupper(curso[0]) == 'I'){
+
+                }
+                //LABCOM 1
+                if (toupper(curso[0]) == 'L'){
+
+                }
+
+
+            }
+
+        }while(resp!=0);
+    }
     if (ciclo == 2) {
         string horario[8][5] = {{"        Lunes         ", "         Martes       ", "      Miercoles       ", "         Jueves       ", "        Viernes       "},//dias
                                 {"Desarrollo-de-empresas", "LabCom-2              ", "                      ", "E. Discrestas-2       ", "                      "},//7-9
