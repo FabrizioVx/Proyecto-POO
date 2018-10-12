@@ -13,31 +13,29 @@ int main() {
     cout<<"Proporcione su nombre: "; cin>>nombre;
     cout<<"Proporcione su apellido: "; cin>>apellido;
 
-    //int puntos=test();//los puntos
-    //cout<<"PUNTAJE TOTAL = "<<puntos<<endl;
+    int puntos=test();//los puntos
+    cout<<"PUNTAJE TOTAL = "<<puntos<<endl;
 
     int ciclo;
     do{
         cout<<"Solo contamos con los horarios del 1 y 2 ciclo...\n";
         cout<<"ingrese ciclo: ";
-        ciclo=inden();}while(2<ciclo || ciclo<1);
+        ciclo=inden();
+    }while(2<ciclo || ciclo<1);
     //solo hasta 1 y 2 ciclo
 
 //imprimiendo horario
-    alto(ciclo);
 
-    /*if (test()<30){//variado
+    if (puntos<30){//variado
         bajo(ciclo);//solo un horario
     }
 
-    if(test()>=30 && test()<70){
-
-        normal(ciclo);//
+    if(puntos>=30 && puntos<70){
+        normal(ciclo);
     }
 
-    if(test()>=70){
-
+    if(puntos>=70){
         alto(ciclo);
-    }*/
+    }
     return 0;
 }
