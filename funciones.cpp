@@ -34,7 +34,7 @@ string horarios( int ciclo,char curso){
               "ICC seccion 3 ma 17-19 and ju 17-19 prof: Melgrejo DIFICULTAD: 2\n"
               "ICC seccion 4 lu 13-15 and vi 13-15 prof: Kenneth DIFICULTAD: 1\n"
               "ICC seccion 5 lu 11-13 and vi 19-21 prof: Alvarado DIFICULTAD: 1\n"
-              "ICC seccion 6 mi 15-17 and vi 15-17 prof: Flores DIFICULTAD: 2\n"
+              "ICC seccion 6 ma 15-17 and vi 15-17 prof: Flores DIFICULTAD: 2\n"
               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, seccion 6=6, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
@@ -42,8 +42,8 @@ string horarios( int ciclo,char curso){
             a="horarios disponibles sugeridos:\n"
               "DESAFIOS G. seccion 1 ma 17-19 prof: Roldan\n"
               "DESAFIOS G. seccion 2 lu 15-17 prof: Corzo\n"
-              "DESAFIOS G. seccion 3 mi 15-17 prof: reman \n"
-              "DESAFIOS G. seccion 4 mi 13-15 prof: camacho\n"
+              "DESAFIOS G. seccion 3 mi 13-15 prof: reman \n"
+              "DESAFIOS G. seccion 4 vi 09-11 prof: camacho\n"
               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
@@ -60,9 +60,9 @@ string horarios( int ciclo,char curso){
         if(curso=='Q'){
             a="horarios disponibles sugeridos:\n"
               "Quimica General seccion 1 ma 17-19 prof: Hoyos  DIFICULTAD: 2\n"
-              "Quimica general seccion 2 lu 15-17 prof: Pinedo  DIFICULTAD: 1\n"
-              "Quimica general seccion 3 mi 15-17 prof: Hoyos  DIFICULTAD: 2\n"
-              "Quimica general seccion 4 mi 13-15 prof: Ratti  DIFICULTAD: 3\n"
+              "Quimica General seccion 2 lu 15-17 prof: Pinedo  DIFICULTAD: 1\n"
+              "Quimica General seccion 3 mi 15-17 prof: Hoyos  DIFICULTAD: 2\n"
+              "Quimica General seccion 4 mi 13-15 prof: Ratti  DIFICULTAD: 3\n"
               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 )\n";
             return a;
         }
@@ -105,7 +105,7 @@ string horarios( int ciclo,char curso){
         }
         if(curso=='D'){
             a="horarios disponibles sugeridos:\n"
-              "Desarrollo de empresas seccion 1 lun 7-9 prof:Guevara \n"
+              "Desarrollo de empresas seccion 1 lun 15-17 prof:Guevara \n"
               "Desarrollo de empresas seccion 2 vi 9-11 prof:Zorrilla \n"
               "Desarrollo de empresas seccion 3 mi 11-13 prof:Camacho \n"
               "Desarrollo de empresas seccion 4 ma 17-19 prof:Guevara \n"
@@ -116,7 +116,7 @@ string horarios( int ciclo,char curso){
         }
         if(curso=='E'){
             a="horarios disponibles sugeridos:\n"
-              "Estructuras discretas II seccion 1 lun 13-15, Miercoles 13-15, Jueves 07-09 profesor: Jose Miguel Renom: DIFICULTAD: 3 \n"
+              "Estructuras discretas II seccion 1 lun 07-09, Miercoles 09-11, Jueves 09-11 profesor: Jose Miguel Renom: DIFICULTAD: 3 \n"
               "Estructuras discretas II seccion 2 lun 11-13, Martes 17-19, Viernes 9-11 prof: Yamilet Serrano DIFICULTAD: 2 \n"
               "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 o niguno= 0 )\n";
             return a;
