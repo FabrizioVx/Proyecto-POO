@@ -26,6 +26,7 @@ int main() {
 
 //imprimiendo horario
 
+
     if (puntos<30){//variado
         bajo(ciclo);//solo un horario
     }
