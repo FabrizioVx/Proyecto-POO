@@ -1969,9 +1969,9 @@ void normal(int ciclo) {
                                 eliminacion(curso, horario);
                                 imprimir(horario);
                             }
-                            if (cambio == 1) {
-                                char muestra = horario[1][0][0];
-                                char muestra2=horario[1][2][0];
+                            if(cambio==1){
+                                char muestra = horario[1][1][0];
+                                char muestra2=horario[3][3][0];
                                 int valor = int(muestra);
                                 int valor2=int(muestra2);
                                 if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
@@ -1979,22 +1979,38 @@ void normal(int ciclo) {
                                     if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else{
                                         eliminacion(curso,horario);
-                                        horario[1][0]="Fisica-1              ";
-                                        horario[1][2]="Fisica-1              ";
+                                        horario[1][1]="LabCom-2              ";
+                                        horario[3][3]="LabCom-2              ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
                                     }
                                 }
-
                             }
-                            if (cambio == 2) {
+                            if(cambio==2){
+                                char muestra = horario[1][1][0];
+                                char muestra2=horario[1][3][0];
+                                int valor = int(muestra);
+                                int valor2=int(muestra2);
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        eliminacion(curso,horario);
+                                        horario[1][1]="LabCom-2              ";
+                                        horario[1][3]="LabCom-2              ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+                            }
+                            if (cambio == 3) {
                                 if(acu==0){
                                     cout<<"curso no recomendado\n";
                                     acu++;
                                 }
                                 else {
-                                    char muestra = horario[6][1][0];
-                                    char muestra2=horario[6][2][0];
+                                    char muestra = horario[6][2][0];
+                                    char muestra2=horario[4][4][0];
                                     int valor = int(muestra);
                                     int valor2=int(muestra2);
                                     if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
@@ -2002,14 +2018,48 @@ void normal(int ciclo) {
                                         if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                         else{
                                             eliminacion(curso,horario);
-                                            horario[6][1]="Fisica-1              ";
-                                            horario[6][2]="Fisica-1              ";
+                                            horario[6][2]="LabCom-2              ";
+                                            horario[4][4]="LabCom-2              ";
                                             cout<<"Se cambio exitosamente tu horario\n";
                                             imprimir(horario);
                                         }
                                     }
                                 }
 
+                            }
+                            if(cambio==4){
+                                char muestra = horario[5][0][0];
+                                char muestra2=horario[2][4][0];
+                                int valor = int(muestra);
+                                int valor2=int(muestra2);
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        eliminacion(curso,horario);
+                                        horario[5][0]="LabCom-2              ";
+                                        horario[2][4]="LabCom-2              ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+                            }
+                            if(cambio==5){
+                                char muestra = horario[3][1][0];
+                                char muestra2=horario[5][2][0];
+                                int valor = int(muestra);
+                                int valor2=int(muestra2);
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        eliminacion(curso,horario);
+                                        horario[2][2]="LabCom-2              ";
+                                        horario[2][4]="LabCom-2              ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
                             }
 
                             if(acu==0){
