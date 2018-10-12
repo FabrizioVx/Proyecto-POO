@@ -13,6 +13,13 @@ using namespace std;
 string horarios( int ciclo,char curso){
     string a=" ";
     if(ciclo==1){
+        if(curso=='E'){
+            a="horarios disponibles sugeridos:\n"
+              "E.discretas 1 1 seccion 1 lu 9-11, ju 7-9 and vi 11-13 prof: Jose Miguel Renom DIFICULTAD: 3\n"
+              "E.discretas 1 seccion 2 lu 13-15, mi 15-17 and vi 15-17 prof: Yamilet serrano DIFICULTAD: 2\n"
+              "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 or niguno= 0 )\n";
+            return a;
+        }
         if(curso=='M'){
             a="horarios disponibles sugeridos:\n"
               "Matematica 1 seccion 1 lu 11-13, mi 9-11 and vi 13-15 prof: Xyoby Chavez DIFICULTAD: 3\n"
@@ -411,7 +418,6 @@ void alto(int ciclo){
                               {"Quimica               ","Icc                   ","LabCom-1              ","                      ","Icc                   "},//15-17
                               {"                      ","                      ","                      ","                      ","                      "},//17-19
                               {"                      ","                      ","                      ","                      ","                      "}};//19-21
-
         imprimir(horario);
         int resp;//para entrar al loop
         do {
@@ -423,6 +429,73 @@ void alto(int ciclo){
                 cout << "que curso deseas cambiar?(escriba el curso con el nombre que se ve en el horario): \n";
                 string curso;
                 cin >> curso;//se ingresa el curso a cambiar
+                //E. discretas 1
+                if (toupper(curso[0])=='E'){
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do{
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        cambio=inden();// opcion
+                        if(cambio==0)break;
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
+                        if(cambio==1){
+                            char muestra = horario[2][0][0];
+                            char muestra2 = horario[1][3][0];
+                            char muestra3 = horario[3][4][0];
+
+                            int valor = int(muestra);
+                            int valor2 = int(muestra2);
+                            int valor3 = int(muestra3);
+                            if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                cout << "conflicto" << endl;
+                            else {
+                                if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                    cout << "conflicto" << endl;
+                                else {
+                                    if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        eliminacion(curso, horario);
+                                        horario[2][0] = "E.Discrestas-1       ";
+                                        horario[1][3] = "E.Discrestas-1       ";
+                                        horario[3][4] = "E.Discrestas-1       ";
+                                        cout << "Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+
+                                    }
+                                }
+                            }
+                        }
+                        if(cambio==2){
+                            char muestra = horario[4][0][0];
+                            char muestra2 = horario[5][2][0];
+                            char muestra3 = horario[5][4][0];
+
+                            int valor = int(muestra);
+                            int valor2 = int(muestra2);
+                            int valor3 = int(muestra3);
+                            if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                cout << "conflicto" << endl;
+                            else {
+                                if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                    cout << "conflicto" << endl;
+                                else {
+                                    if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        eliminacion(curso, horario);
+                                        horario[4][0] = "E.Discrestas-2       ";
+                                        horario[5][2] = "E.Discrestas-2       ";
+                                        horario[5][4] = "E.Discrestas-2       ";
+                                        cout << "Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+
+                                    }
+                                }
+                            }
+                        }
+                    }while(cambio!=0);
+                }
                 //fisica 1
                 if (toupper(curso[0])=='F'){
                     int cambio;
@@ -467,53 +540,8 @@ void alto(int ciclo){
                             }
                         }
                     }while(cambio!=0);
-                }
-                if (toupper(curso[0])=='E'){
-                    int cambio;
-                    //comunicando los cursos disponibles
-                    do{
-                        cout<<horarios(ciclo,toupper(curso[0]));
-                        cambio=inden();// opcion
-                        if(cambio==0)break;
-                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
-                        if(cambio==1){
-                            char muestra = horario[1][0][0];
-                            char muestra2=horario[1][2][0];
-                            int valor = int(muestra);
-                            int valor2=int(muestra2);
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else{
-                                if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                else{
-                                    eliminacion(curso,horario);
-                                    horario[1][0]="E.Discretas-1         ";
-                                    horario[1][2]="E-Discretas-1         ";
-                                    cout<<"Se cambio exitosamente tu horario\n";
-                                    imprimir(horario);
-                                }
-                            }
-                        }
-                        if(cambio==2){
-                            char muestra = horario[6][1][0];
-                            char muestra2=horario[6][2][0];
-                            int valor = int(muestra);
-                            int valor2=int(muestra2);
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else{
-                                if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                else{
-                                    eliminacion(curso,horario);
-                                    horario[6][1]="E.Discretas-1          ";
-                                    horario[6][2]="E.Discretas-1          ";
-                                    cout<<"Se cambio exitosamente tu horario\n";
-                                    imprimir(horario);
-                                }
-                            }
-                        }
-                    }while(cambio!=0);
-                }
 
-
+                }
                 //Mate 1
                 if (toupper(curso[0])=='M'){
                     int cambio;
@@ -1576,66 +1604,183 @@ void normal(int ciclo) {
             if (resp == 0)break;//si tu respuesta es no se sale del loop
             if (resp != 1) { cout << "valor incorrecto.. ingrese otra vez\n"; }
             else{
+                cout<<"E. discretas-2 en tu horario preliminar\n";
                 cout << "que curso deseas cambiar?(escriba el curso con el nombre que se ve en el horario): \n";
                 string curso;
                 cin >> curso;
+                //E.discretas 1
+                if (toupper(curso[0]) == 'E'){
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do {
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        int acu=0;
+                        while(acu<2) {
+                            if(acu==1){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+
+                            cambio=inden();// opcion
+                            if (cambio == 0)break;
+                            if (cambio == -1) {
+                                eliminacion(curso, horario);
+                                imprimir(horario);
+                            }
+                            if (cambio == 1) {
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[2][0][0];
+                                    char muestra2 = horario[1][3][0];
+                                    char muestra3 = horario[3][4][0];
+
+                                    int valor = int(muestra);
+                                    int valor2 = int(muestra2);
+                                    int valor3 = int(muestra3);
+                                    if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                                cout << "conflicto" << endl;
+                                            else {
+                                                eliminacion(curso, horario);
+                                                horario[2][0] = "E.Discrestas-1       ";
+                                                horario[1][3] = "E.Discrestas-1       ";
+                                                horario[3][4] = "E.Discrestas-1       ";
+                                                cout << "Se cambio exitosamente tu horario\n";
+                                                imprimir(horario);
+
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                            if (cambio == 2) {
+                                char muestra = horario[4][0][0];
+                                char muestra2 = horario[5][2][0];
+                                char muestra3 = horario[5][4][0];
+
+                                int valor = int(muestra);
+                                int valor2 = int(muestra2);
+                                int valor3 = int(muestra3);
+                                if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                    cout << "conflicto" << endl;
+                                else {
+                                    if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            eliminacion(curso, horario);
+                                            horario[4][0] = "E.Discrestas-1       ";
+                                            horario[5][2] = "E.Discrestas-1       ";
+                                            horario[5][4] = "E.Discrestas-1       ";
+                                            cout << "Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            if(acu==0){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+                        }
+
+                    } while (cambio != 0);
+
+
+                }
                 //MATEMATICA 1
                 if (toupper(curso[0]) == 'M'){
                     int cambio;
                     //comunicando los cursos disponibles
                     do{
                         cout<<horarios(ciclo,toupper(curso[0]));
-                        cambio=inden();// opcion
-                        if(cambio==0)break;
-                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
-                        if(cambio==1){
-                            char muestra = horario[3][0][0];
-                            char muestra2= horario[2][2][0];
-                            char muestra3= horario[4][4][0];
+                        int acu=0;
+                        while(acu<2) {
+                            if (acu == 1) {
+                                cout << horarios(ciclo, toupper(curso[0]));
+                            };
+                            cambio = inden();// opcion
+                            if (cambio == 0)break;
+                            if (cambio == -1) {
+                                eliminacion(curso, horario);
+                                imprimir(horario);
+                            }
+                            if (cambio == 1) {
+                                if (acu == 0) {
+                                    cout << "curso no recomendado\n";
+                                    acu++;
+                                } else {
+                                    char muestra = horario[3][0][0];
+                                    char muestra2 = horario[2][2][0];
+                                    char muestra3 = horario[4][4][0];
 
-                            int valor = int(muestra);
-                            int valor2=int(muestra2);
-                            int valor3=int(muestra3);
+                                    int valor = int(muestra);
+                                    int valor2 = int(muestra2);
+                                    int valor3 = int(muestra3);
 
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else{
-                                if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                else{
-                                    if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                    else{
-                                        eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                        horario[3][0]="Matematica-1          ";
-                                        horario[2][2]="Matematica-1          ";
-                                        horario[4][4]="Matematica-1          ";
-                                        cout<<"Se cambio exitosamente tu horario\n";
-                                        imprimir(horario);
+                                    if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                                cout << "conflicto" << endl;
+                                            else {
+                                                eliminacion(curso,
+                                                            horario);//se elimina en toda la matriz el curso elegido
+                                                horario[3][0] = "Matematica-1          ";
+                                                horario[2][2] = "Matematica-1          ";
+                                                horario[4][4] = "Matematica-1          ";
+                                                cout << "Se cambio exitosamente tu horario\n";
+                                                imprimir(horario);
+                                            }
+                                        }
                                     }
                                 }
                             }
-                        }
-                        if(cambio==2){
-                            char muestra = horario[4][0][0];
-                            char muestra2= horario[5][2][0];
-                            char muestra3= horario[5][4][0];
+                            if (cambio == 2) {
+                                char muestra = horario[4][0][0];
+                                char muestra2 = horario[5][2][0];
+                                char muestra3 = horario[5][4][0];
 
-                            int valor = int(muestra);
-                            int valor2=int(muestra2);
-                            int valor3=int(muestra3);
+                                int valor = int(muestra);
+                                int valor2 = int(muestra2);
+                                int valor3 = int(muestra3);
 
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else{
-                                if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                else{
-                                    if(valor3<90 && valor3>64 && muestra3!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                    else{
-                                        eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                        horario[4][0]="Matematica-1          ";
-                                        horario[5][2]="Matematica-1          ";
-                                        horario[5][4]="Matematica-1          ";
-                                        cout<<"Se cambio exitosamente tu horario\n";
-                                        imprimir(horario);
+                                if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                    cout << "conflicto" << endl;
+                                else {
+                                    if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
+                                            horario[4][0] = "Matematica-1          ";
+                                            horario[5][2] = "Matematica-1          ";
+                                            horario[5][4] = "Matematica-1          ";
+                                            cout << "Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
                                     }
                                 }
+                            }
+                            if (acu == 0) {
+                                cout << horarios(ciclo, toupper(curso[0]));
                             }
                         }
 
@@ -1730,62 +1875,62 @@ void normal(int ciclo) {
                                 eliminacion(curso, horario);
                                 imprimir(horario);
                             }
-                        if(cambio==1){
+                            if(cambio==1){
 
-                            char muestra = horario[6][1][0];
-                            int valor = int(muestra);
+                                char muestra = horario[6][1][0];
+                                int valor = int(muestra);
 
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else {
-                                eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
-                                horario[6][1] = "Quimica               ";
-                                cout << "Se cambio exitosamente tu horario\n";
-                                imprimir(horario);
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else {
+                                    eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
+                                    horario[6][1] = "Quimica               ";
+                                    cout << "Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
+                                }
                             }
-                        }
-                        if(cambio==2){
-                            char muestra = horario[5][0][0];
-                            int valor = int(muestra);
-
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else{
-                                eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[5][0]="Quimica               ";
-                                cout<<"Se cambio exitosamente tu horario\n";
-                                imprimir(horario);
-                            }
-                        }
-                        if(cambio==3){
-                            char muestra = horario[5][2][0];
-                            int valor = int(muestra);
-
-                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                            else{
-                                eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                horario[5][2]="Quimica               ";
-                                cout<<"Se cambio exitosamente tu horario\n";
-                                imprimir(horario);
-                            }
-                        }
-                        if(cambio==4){
-                            if(acu==0){
-                                cout<<"curso no recomendado\n";
-                                acu++;
-                            }
-
-                            else{
-                                char muestra = horario[4][2][0];
+                            if(cambio==2){
+                                char muestra = horario[5][0][0];
                                 int valor = int(muestra);
 
                                 if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                 else{
                                     eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
-                                    horario[4][2]="Quimica               ";
+                                    horario[5][0]="Quimica               ";
                                     cout<<"Se cambio exitosamente tu horario\n";
                                     imprimir(horario);
                                 }
                             }
-                        }
+                            if(cambio==3){
+                                char muestra = horario[5][2][0];
+                                int valor = int(muestra);
+
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
+                                    horario[5][2]="Quimica               ";
+                                    cout<<"Se cambio exitosamente tu horario\n";
+                                    imprimir(horario);
+                                }
+                            }
+                            if(cambio==4){
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+
+                                else{
+                                    char muestra = horario[4][2][0];
+                                    int valor = int(muestra);
+
+                                    if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
+                                        horario[4][2]="Quimica               ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+                            }
                         }
 
                     }while(cambio!=0);
@@ -2032,30 +2177,13 @@ void normal(int ciclo) {
                                 }
                             }
                             if(cambio==2){
-                                char muestra = horario[1][1][0];
-                                char muestra2=horario[1][3][0];
-                                int valor = int(muestra);
-                                int valor2=int(muestra2);
-                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                else{
-                                    if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
-                                    else{
-                                        eliminacion(curso,horario);
-                                        horario[1][1]="LabCom-2              ";
-                                        horario[1][3]="LabCom-2              ";
-                                        cout<<"Se cambio exitosamente tu horario\n";
-                                        imprimir(horario);
-                                    }
-                                }
-                            }
-                            if (cambio == 3) {
                                 if(acu==0){
                                     cout<<"curso no recomendado\n";
                                     acu++;
                                 }
                                 else {
-                                    char muestra = horario[6][2][0];
-                                    char muestra2=horario[4][4][0];
+                                    char muestra = horario[1][1][0];
+                                    char muestra2=horario[1][3][0];
                                     int valor = int(muestra);
                                     int valor2=int(muestra2);
                                     if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
@@ -2063,18 +2191,17 @@ void normal(int ciclo) {
                                         if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                         else{
                                             eliminacion(curso,horario);
-                                            horario[6][2]="LabCom-2              ";
-                                            horario[4][4]="LabCom-2              ";
+                                            horario[1][1]="LabCom-2              ";
+                                            horario[1][3]="LabCom-2              ";
                                             cout<<"Se cambio exitosamente tu horario\n";
                                             imprimir(horario);
                                         }
                                     }
                                 }
-
                             }
-                            if(cambio==4){
-                                char muestra = horario[5][0][0];
-                                char muestra2=horario[2][4][0];
+                            if (cambio == 3) {
+                                char muestra = horario[6][2][0];
+                                char muestra2=horario[4][4][0];
                                 int valor = int(muestra);
                                 int valor2=int(muestra2);
                                 if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
@@ -2082,10 +2209,34 @@ void normal(int ciclo) {
                                     if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
                                     else{
                                         eliminacion(curso,horario);
-                                        horario[5][0]="LabCom-2              ";
-                                        horario[2][4]="LabCom-2              ";
+                                        horario[6][2]="LabCom-2              ";
+                                        horario[4][4]="LabCom-2              ";
                                         cout<<"Se cambio exitosamente tu horario\n";
                                         imprimir(horario);
+                                    }
+                                }
+
+                            }
+                            if(cambio==4){
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[5][0][0];
+                                    char muestra2=horario[2][4][0];
+                                    int valor = int(muestra);
+                                    int valor2=int(muestra2);
+                                    if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                        else{
+                                            eliminacion(curso,horario);
+                                            horario[5][0]="LabCom-2              ";
+                                            horario[2][4]="LabCom-2              ";
+                                            cout<<"Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
                                     }
                                 }
                             }
@@ -2121,6 +2272,8 @@ void normal(int ciclo) {
             }
 
         }while(resp!=0);
+        imprimir(horario);
+        leerarch(horario);
     }
     if (ciclo == 2) {
         string horario[8][5] = {{"        Lunes         ", "         Martes       ", "      Miercoles       ", "         Jueves       ", "        Viernes       "},//dias
@@ -2165,7 +2318,7 @@ void normal(int ciclo) {
 
                             if (cambio == 1) {
                                 if(acu==0){
-                                    cout<<"curso no recomendado\n";
+                                    cout<<"seccion no recomendado\n";
                                     acu++;
                                 }
                                 else {
@@ -2825,8 +2978,7 @@ void normal(int ciclo) {
 
     }
 }
-void bajo(int ciclo)
-{   //CICLO1
+void bajo(int ciclo) {   //CICLO1
     if(ciclo==1){
         string horario[8][5];
         imprimir(horario);
@@ -2869,6 +3021,8 @@ void bajo(int ciclo)
             }
 
         }while(resp!=0);
+        imprimir(horario);
+        leerarch(horario);
     }
     //CICLO2
     if(ciclo==2){
@@ -2890,7 +3044,7 @@ void bajo(int ciclo)
             if (resp == 0)break;//si tu respuesta es no se sale del loop
             if (resp != 1) { cout << "valor incorrecto.. ingrese otra vez\n"; }
             else {
-                cout<<"cursos faltantes: Fisica-2, E. discretas-2\n";
+                cout<<"no se incluyo Fisica-2 y E. discretas-2 en tu horario preliminar\n";
                 cout << "que curso deseas cambiar?(escriba el curso con el nombre que se ve en el horario): \n";
                 string curso;
                 cin >> curso;//se ingresa el curso a cambiar
@@ -2984,26 +3138,501 @@ void bajo(int ciclo)
                 }
                 //Fisica2
                 if (toupper(curso[0]) == 'F') {
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do {
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        int acu=0;
+                        while(acu<2) {
+                            if(acu==1){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+
+                            cambio=inden();// opcion
+                            if (cambio == 0)break;
+                            if (cambio == -1) {
+                                eliminacion(curso, horario);
+                                imprimir(horario);
+                            }
+
+                            if (cambio == 1) {
+                                cout << "Seccion no recomendada\n";
+                            }
+                            if (cambio == 2) {
+                                char muestra = horario[2][1][0];
+                                char muestra2=horario[2][4][0];
+                                int valor = int(muestra);
+                                int valor2=int(muestra2);
+
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        //se elimina en toda la matriz el curso elegido
+                                        eliminacion(curso,horario);
+                                        horario[2][1]="Fisica-2              ";
+                                        horario[2][4]="Fisica-2              ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+
+
+                            }
+                            if(acu==0){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+                        }
+
+                    } while (cambio != 0);
 
                 }
-                //discretas
-                if (toupper(curso[0]) == 'E') {
-
-                }
-                //labcom2
+                //lab com
                 if (toupper(curso[0]) == 'L') {
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do {
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        int acu=0;
+                        while(acu<2) {
+                            if(acu==1){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+
+                            cambio=inden();// opcion
+                            if (cambio == 0)break;
+                            if (cambio == -1) {
+                                eliminacion(curso, horario);
+                                imprimir(horario);
+                            }
+                            if (cambio == 1) {//primero se verifica si hace conflicto en tu horario
+
+                                char muestra = horario[1][0][0];
+                                char muestra2 = horario[1][4][0];
+                                int valor = int(muestra);
+                                int valor2 = int(muestra2);
+                                if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))cout << "conflicto" << endl;
+                                else {
+                                    if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
+                                        horario[1][0] = "LabCom-2              ";
+                                        horario[1][4] = "LabCom-2              ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+
+                            }
+                            if (cambio == 2) {//primero se verifica si hace conflicto en tu horario
+
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[2][1][0];
+                                    char muestra2 = horario[2][3][0];
+                                    int valor = int(muestra);
+                                    int valor2 = int(muestra2);
+
+                                    if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))cout << "conflicto" << endl;
+                                    else {
+                                        if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            eliminacion(curso, horario);//se elimina en toda la matriz el curso elegido
+                                            horario[2][1] = "LabCom-2              ";
+                                            horario[2][3] = "LabCom-2              ";
+                                            cout<<"Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
+                                    }
+                                }
+                            }
+
+                            if (cambio == 3) {
+                                cout << "Seccion no recomendada\n";
+                            }
+                            if (cambio == 4) {//primero se verifica si hace conflicto en tu horario
+
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[3][3][0];
+                                    char muestra2 = horario[3][4][0];
+                                    int valor = int(muestra);
+                                    int valor2 = int(muestra2);
+
+                                    if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))cout << "conflicto" << endl;
+                                    else {
+                                        if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            eliminacion(curso, horario);
+                                            horario[3][3] = "LabCom-2              ";
+                                            horario[3][4] = "LabCom-2              ";
+                                            cout<<"Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
+                                    }
+                                }
+
+
+                            }
+                            if (cambio == 5) {//primero se verifica si hace conflicto en tu horario
+
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[1][1][0];
+                                    char muestra2 = horario[4][3][0];
+                                    int valor = int(muestra);
+                                    int valor2 = int(muestra2);
+
+                                    if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))cout << "conflicto" << endl;
+                                    else {
+                                        if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            eliminacion(curso, horario);
+                                            horario[1][1] = "LabCom-2              ";
+                                            horario[4][3] = "LabCom-2              ";
+                                            cout<<"Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
+                                    }
+                                }
+                            }
+                            if(acu==0){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+                        }
+
+                    } while (cambio != 0);
+
+                }
+                //POO
+                if (toupper(curso[0]) == 'P') {
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do {
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        int acu=0;
+                        while(acu<2) {
+                            if(acu==1){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+
+                            cambio=inden();// opcion
+                            if (cambio == 0)break;
+                            if (cambio == -1) {
+                                eliminacion(curso, horario);
+                                imprimir(horario);
+                            }
+
+                            if (cambio == 1) {
+                                cout<<"Seccion recomendado\n";
+                            }
+                            if(cambio==2){//primero se verifica si hace conflicto en tu horario
+
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[1][1][0];
+                                    char muestra2=horario[2][3][0];
+                                    int valor = int(muestra);
+                                    int valor2=int(muestra2);
+                                    if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                        else{
+                                            eliminacion(curso,horario);
+                                            horario[1][1]="POO                   ";
+                                            horario[2][3]="POO                   ";
+                                            cout<<"Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
+                                    }
+                                }
+
+                            }
+                            if(cambio==3){//primero se verifica si hace conflicto en tu horario
+
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[7][1][0];
+                                    char muestra2=horario[7][4][0];
+                                    int valor = int(muestra);
+                                    int valor2=int(muestra2);
+                                    if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                        else{
+                                            eliminacion(curso,horario);
+                                            horario[7][1]="POO                   ";
+                                            horario[7][4]="POO                   ";
+                                            cout<<"Se cambio exitosamente tu horario\n";
+                                            imprimir(horario);
+                                        }
+                                    }
+                                }
+
+                            }
+                            if(cambio==4){//primero se verifica si hace conflicto en tu horario
+
+                                char muestra = horario[6][0][0];
+                                char muestra2=horario[4][4][0];
+                                int valor = int(muestra);
+                                int valor2=int(muestra2);
+                                if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                else{
+                                    if(valor2<90 && valor2>64 && muestra2!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                                    else{
+                                        eliminacion(curso,horario);
+                                        horario[6][0]="POO                   ";
+                                        horario[4][4]="POO                   ";
+                                        cout<<"Se cambio exitosamente tu horario\n";
+                                        imprimir(horario);
+                                    }
+                                }
+
+                            }
+                            if(acu==0){
+                                cout<<horarios(ciclo,toupper(curso[0]));
+                            }
+                        }
+
+                    } while (cambio != 0);
 
                 }
                 //desarrollo de empresas
-                if (toupper(curso[0]) == 'D') {
+                if (toupper(curso[0])=='D'){
 
-                }
-                //arte y tecnologia
-                if (toupper(curso[0]) == 'A') {
+                    int cambio;
 
+                    do{
+                        //comunicando los cursos disponibles
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        cambio=inden();// opcion
+                        if(cambio==0)break;
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
+
+                        if(cambio==1){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[5][0][0];
+
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
+                                horario[5][0]="Desarrollo-de-empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==2){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[2][4][0];
+
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
+                                horario[2][4]="Desarrollo-de-empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==3){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[3][2][0];
+
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);
+                                horario[3][2]="Desarrollo-de-empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==4){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[6][1][0];
+
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);
+                                horario[6][1]="Desarrollo-de-empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==5){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[7][1][0];
+
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);
+                                horario[7][1]="Desarrollo-de-empresas";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+
+
+                    }while(cambio!=0);
                 }
-                //poo1
-                if (toupper(curso[0]) == 'P') {
+                //estructura discretas
+                if (toupper(curso[0]) == 'E') {
+                    int cambio;
+                    //comunicando los cursos disponibles
+                    do {
+                        cout << horarios(ciclo, toupper(curso[0]));
+                        int acu = 0;
+                        while (acu < 2) {
+                            if (acu == 1) {
+                                cout << horarios(ciclo, toupper(curso[0]));
+                            }
+
+                            cambio = inden();// opcion
+                            if (cambio == 0)break;
+                            if (cambio == -1) {
+                                eliminacion(curso, horario);
+                                imprimir(horario);
+                            }
+
+                            if (cambio == 1) {
+                                cout<<"Seccion no recomendado\n";
+                            }
+                            if (cambio == 2) {
+                                if(acu==0){
+                                    cout<<"curso no recomendado\n";
+                                    acu++;
+                                }
+                                else {
+                                    char muestra = horario[3][0][0];
+                                    char muestra2 = horario[6][1][0];
+                                    char muestra3 = horario[2][4][0];
+
+                                    int valor = int(muestra);
+                                    int valor2 = int(muestra2);
+                                    int valor3 = int(muestra3);
+                                    if (valor < 90 && valor > 64 && muestra != toupper(curso[0]))
+                                        cout << "conflicto" << endl;
+                                    else {
+                                        if (valor2 < 90 && valor2 > 64 && muestra2 != toupper(curso[0]))
+                                            cout << "conflicto" << endl;
+                                        else {
+                                            if (valor3 < 90 && valor3 > 64 && muestra3 != toupper(curso[0]))
+                                                cout << "conflicto" << endl;
+                                            else {
+                                                eliminacion(curso, horario);
+                                                horario[3][0] = "E.Discrestas-2       ";
+                                                horario[6][1] = "E.Discrestas-2       ";
+                                                horario[2][4] = "E.Discrestas-2       ";
+                                                cout << "Se cambio exitosamente tu horario\n";
+                                                imprimir(horario);
+
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    } while (cambio != 0);
+                }
+                //arte y tec
+                if(toupper(curso[0])=='A'){
+                    int cambio;
+
+                    do{
+                        //comunicando los cursos disponibles
+                        cout<<horarios(ciclo,toupper(curso[0]));
+                        cambio=inden();// opcion
+                        if(cambio==0)break;
+                        if(cambio==-1){eliminacion(curso,horario);imprimir(horario);}
+                        if(cambio==1){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[2][0][0];
+
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
+                                horario[2][0]="Arte&tecnologia       ";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==2){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[2][0][0];
+                            int valor = int(muestra);
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);//se elimina en toda la matriz el curso elegido
+                                horario[2][0]="Arte&tecnologia       ";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==3){//primero se verifica si hace conflicto en tu horario
+
+                            char muestra = horario[3][4][0];
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);
+                                horario[3][4]="Arte&tecnologia       ";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                        if(cambio==4){//primero se verifica si hace conflicto en tu horario
+                            char muestra = horario[2][3][0];
+                            int valor = int(muestra);
+
+                            if(valor<90 && valor>64 && muestra!=toupper(curso[0]))cout<<"conflicto"<<endl;
+                            else{
+                                eliminacion(curso,horario);
+                                horario[2][3]="Arte&tecnologia       ";
+                                cout<<"Se cambio exitosamente tu horario\n";
+                                imprimir(horario);
+                            }
+
+                        }
+                    }while(cambio!=0);
 
                 }
             }
