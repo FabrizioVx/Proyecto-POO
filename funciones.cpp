@@ -1003,7 +1003,6 @@ void alto(int ciclo){
                             }
                         }
 
-
                     }while(cambio!=0);
 
                 }
