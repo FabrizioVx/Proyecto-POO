@@ -177,7 +177,7 @@ void imprimir(string horario[8][5]){
 }
 void leerarch(string a[8][5]){
     ofstream archivo;//utiliza la libreia fstream
-    archivo.open("/Users/markopuchuri/Desktop/horario.txt",ios::out);//realiza la apertura del archvo
+    archivo.open(".txt",ios::out);//crea el archivo text,uno coloca en realidad el lugar donde se guardara tu archivo sin embargo nosotros para fines prácticos solo lo guardamos por ejemplo en el escritorio.
     archivo << ".............................................................................................................................."<<endl;
     archivo << ".............................................................................................................................."<<endl;
     archivo << ".............................................................................................................................."<<endl;
