@@ -38,7 +38,7 @@ string horarios( int ciclo,char curso){
             a="horarios disponibles sugeridos:\n"
               "ICC seccion 1 ma 7-9 and mi 15-17 prof: Cuadros DIFICULTAD: 3\n"
               "ICC seccion 2 mi 9-11 and vi 9-11 prof: Bernejo DIFICULTAD: 2\n"
-              "ICC seccion 3 ma 17-19 and ju 17-19 prof: Melgrejo DIFICULTAD: 2\n"
+              "ICC seccion 3 ma 17-19 and ju 17-19 prof: Melgarejo DIFICULTAD: 2\n"
               "ICC seccion 4 lu 13-15 and vi 13-15 prof: Kenneth DIFICULTAD: 1\n"
               "ICC seccion 5 lu 11-13 and vi 19-21 prof: Alvarado DIFICULTAD: 1\n"
               "ICC seccion 6 ma 15-17 and vi 15-17 prof: Flores DIFICULTAD: 2\n"
@@ -176,8 +176,10 @@ void imprimir(string horario[8][5]){
     }
 }
 void leerarch(string a[8][5]){
-    ofstream archivo;
-    archivo.open("/Users/markopuchuri/Desktop/horario.txt",ios::out);
+    ofstream archivo;//utiliza la libreia fstream
+    archivo.open("/Users/markopuchuri/Desktop/horario.txt",ios::out);//realiza la apertura del archvo
+    archivo<<"Horario es el siguiente:";
+    
     for (int i=0;i<8;i++) {
         if(i==0){archivo<<"Dias: ";}
         if(i==1){archivo<<"07-09 ";}
@@ -192,7 +194,7 @@ void leerarch(string a[8][5]){
         }
         archivo << "\n";
     }
-    archivo.close();
+    archivo.close();//cierra el archivo
 }
 int test() {
     string respuesta;
