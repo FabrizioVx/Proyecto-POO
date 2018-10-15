@@ -139,6 +139,53 @@ string horarios( int ciclo,char curso){
 
         }
     }
+    if(ciclo==3){
+        if(curso=='M'){
+            a="horarios disponibles:\n"
+              "matematica 3 seccion 1 lun mi vi 7-9 prof: Juan Perea DIFICULTAD: 3\n"
+              "matematica 3 seccion 2 lun mi vi 9-11 prof: Miguel Palomino DIFICULTAD: 1\n"
+              "matematica 3 seccion 3 lun mi vi 11-13 prof: Sergio Zegarra DIFICULTAD: 2\n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, borrar curso=-1 or niguno= 0 )\n";
+            return a;
+        }
+        if(curso=='P'){
+            a= "horarios disponibles:\n"
+               "POO 2 seccion 1 lun 7-9 vi 7-9 Prof: Farfán DIFICULTAD: 1\n"
+               "POO 2 seccion 2 mar 9-11 ju 9-11 Prof: Melgarejo DIFICULTAD: 2\n"
+               "POO 2 seccion 3 mi  11-13 vi 11-13 Prof:Villegas DIFICULTAD: 3\n"
+               "POO 2 seccion 4 ju 11-13 vi 11-13 Prof:Stelac DIFICULTAD: 2\n"
+               "POO 2 seccion 5 ma 7-9 ju 13-15 Prof:Dimitri DIFICULTAD: 2\n"
+               "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
+            return a;
+        }
+        if(curso=='G'){
+            a="horarios disponibles sugeridos:\n"
+              "Gestion de empresas seccion 1 lun 15-17 prof:Guevara \n"
+              "Gestion de empresas seccion 2 vi 9-11 prof:Zorrilla \n"
+              "Gestion de empresas seccion 3 mi 11-13 prof:Camacho \n"
+              "Gestion de empresas seccion 4 ma 17-19 prof:Guevara \n"
+              "Gestion de empresas seccion 5 ma 19-21 prof:Español \n"
+              "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, seccion 5=5, borrar curso=-1 or niguno= 0)\n";
+            return a;
+
+        }
+        if(curso=='A'){
+            a="horarios disponibles sugeridos:\n"
+              "Arquitectura de computadoras seccion 1 lun 07-09, Miercoles 09-11, Jueves 09-11 profesor: Jose Miguel Renom: DIFICULTAD: 3 \n"
+              "Arquitectura de computadoras seccion 2 lun 11-13, Martes 17-19, Viernes 9-11 prof: Yamilet Serrano DIFICULTAD: 2 \n"
+              "cual desea(seccion 1=1, seccion 2 =2, borrar curso=-1 o niguno= 0 )\n";
+            return a;
+        }
+        if(curso=='D'){
+          a="Desarrollo basado en plataformas seccion1 martes 9-12, jueves 15-17 prof: Cuadros \n"
+            "Desarrollo basado en plataformas seccion1 martes 7-9, viernes 7-9 prof: Randiel \n"
+            "Desarrollo basado en plataformas seccion1 miercoles 9-12, sabado 12-14 prof: Dimitri \n"
+            "Desarrollo basado en plataforma seccion 4 jueves 15-17, viernes 11-1 \n"
+            "cual desea(seccion 1=1, seccion 2 =2, seccion 3=3, seccion 4=4, borrar curso=-1 or niguno= 0 o incorrecto\n";
+          return a;
+        } 
+
+    }
     return a;
 }
 int verif(string a,char answer){
@@ -212,7 +259,7 @@ void leerarch(string a[8][5]){
         archivo << ".............................................................................................................................."<<endl;
         archivo << ".............................................................................................................................."<<endl;
         archivo << ".............................................................................................................................."<<endl;
-    }               {"        LUNES         ","        MARTES        ","       MIERCOLES      ","       JUEVES         ","        VIERNES       "}
+    }               
     archivo.close();//cierra el archivo
 }
 int test() {
